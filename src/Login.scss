@@ -1,0 +1,30 @@
+.Login {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--light-blue);
+  color: var(--main-blue);
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 500px;
+  margin: 20vh auto;
+  font-size: 1.8rem;
+  border: 2px solid var(--grey);
+  box-shadow: 0px 0px 15px 8px var(--grey);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 4rem;
+  justify-content: center;
+
+  input {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+
+    &:active,
+    &:focus {
+      outline-color: var(--main-blue);
+    }
+  }
+}
