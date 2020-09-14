@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Login.scss';
+import logo from './images/logo.png';
 import fire from './fire';
 import { auth } from 'firebase';
 
@@ -79,6 +80,7 @@ const Login = () => {
 
   return (
     <div className="Login">
+      <img src={logo} className="Login-logo" alt="spnft-logo" />
       <label>
         Korisničko ime
         <input
@@ -100,7 +102,7 @@ const Login = () => {
         />
       </label>
       <p className="errorMessage">{passwordError}</p>
-      <button>Prijavi se</button>
+      <button className="Login-btn">Prijavi se</button>
     </div>
   );
 };
