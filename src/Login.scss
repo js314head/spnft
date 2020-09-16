@@ -48,6 +48,11 @@
       background-color: var(--main-blue);
       color: white;
     }
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
   }
 
   &-newUser {

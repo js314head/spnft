@@ -1,26 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch, NavLink } from 'react-router-dom';
 import './Menu.scss';
 import logo from './images/logo.png';
+import Settings from './Settings';
 
-const Menu = ({ handleLogout }) => {
+const Menu = ({
+  handleLogout,
+  createCustomer,
+  law,
+  settings,
+  importTransactions,
+}) => {
   return (
     <div className="Menu">
       <img src={logo} className="Menu-logo" alt="spnft-logo" />
-      <nav className="Menu-nav">
-        <NavLink to="/" className="navLink">
+      <ul className="Menu-nav">
+        <li className="Menu-navLink" onClick={importTransactions}>
           Unos transakcije
-        </NavLink>
-        <NavLink to="/stranke" className="navLink">
+        </li>
+        <li className="Menu-navLink" onClick={createCustomer}>
           Kreiranje stranke
-        </NavLink>
-        <NavLink to="/zakon" className="navLink">
+        </li>
+        <li className="Menu-navLink" onClick={law}>
           Zakon
-        </NavLink>
-        <NavLink to="/postavke" className="navLink">
+        </li>
+        <li className="Menu-navLink" onClick={settings}>
           Postavke
-        </NavLink>
-      </nav>
+        </li>
+      </ul>
       <button onClick={handleLogout} className="Menu-btn">
         Odjavi se
       </button>

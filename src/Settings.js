@@ -1,12 +1,10 @@
 import React from 'react';
-import Menu from './Menu';
-import './Home.scss';
+import './Settings.scss';
 
 const Settings = ({ handleLogout }) => {
   return (
-    <div className="Home">
-      <Menu handleLogout={handleLogout} />
-      <Customers />
+    <div className="Settings">
+      <h1>Kifla</h1>
     </div>
   );
 };
