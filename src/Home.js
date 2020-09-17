@@ -7,7 +7,7 @@ import Settings from './Settings';
 import './Home.scss';
 import CreateCustomer from './CreateCustomer';
 
-const Home = ({ handleLogout }) => {
+const Home = ({ handleLogout, user }) => {
   const [page, setPage] = useState('home');
 
   const importTransactions = () => {
@@ -35,6 +35,7 @@ const Home = ({ handleLogout }) => {
         settings={settings}
         importTransactions={importTransactions}
         page={page}
+        user={user}
       />
       {page === 'home' ? <Customers /> : null}
       {page === 'createCustomer' ? <CreateCustomer /> : null}

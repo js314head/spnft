@@ -47,6 +47,7 @@ const Login = () => {
   const authListener = () => {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
+        console.log(user.email);
         clearInputs();
         setUser(user);
       } else {
@@ -62,7 +63,7 @@ const Login = () => {
   return (
     <>
       {user ? (
-        <Home handleLogout={handleLogout} />
+        <Home handleLogout={handleLogout} user={user.email} />
       ) : (
         <div className="Login">
           <img src={logo} className="Login-logo" alt="spnft-logo" />

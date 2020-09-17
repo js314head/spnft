@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Menu.scss';
 import logo from './images/logo.png';
-import Settings from './Settings';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 const Menu = ({
   handleLogout,
@@ -10,6 +10,7 @@ const Menu = ({
   settings,
   importTransactions,
   page,
+  user,
 }) => {
   return (
     <div className="Menu">
@@ -19,6 +20,7 @@ const Menu = ({
         alt="spnft-logo"
         onClick={importTransactions}
       />
+
       <ul className="Menu-nav">
         <li className="Menu-navLink" onClick={importTransactions}>
           Unos transakcije
@@ -33,9 +35,17 @@ const Menu = ({
           Postavke
         </li>
       </ul>
-      <button onClick={handleLogout} className="Menu-btn">
-        Odjavi se
-      </button>
+      <div className="Menu-logout">
+        <p className="Menu-user">
+          <span>
+            <AccountBoxIcon className="svg" />
+          </span>
+          {user}
+        </p>
+        <button onClick={handleLogout} className="Menu-logout-btn">
+          Odjavi se
+        </button>
+      </div>
     </div>
   );
 };
