@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import SearchAndSort from './SearchAndSort';
 import './Customers.scss';
 
 const Customers = () => {
   return (
     <div className="Customers">
-      <h2>Customers</h2>
+      <SearchAndSort />
     </div>
   );
 };

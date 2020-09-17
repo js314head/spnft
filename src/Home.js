@@ -34,6 +34,7 @@ const Home = ({ handleLogout }) => {
         law={law}
         settings={settings}
         importTransactions={importTransactions}
+        page={page}
       />
       {page === 'home' ? <Customers /> : null}
       {page === 'createCustomer' ? <CreateCustomer /> : null}

@@ -9,10 +9,16 @@ const Menu = ({
   law,
   settings,
   importTransactions,
+  page,
 }) => {
   return (
     <div className="Menu">
-      <img src={logo} className="Menu-logo" alt="spnft-logo" />
+      <img
+        src={logo}
+        className="Menu-logo"
+        alt="spnft-logo"
+        onClick={importTransactions}
+      />
       <ul className="Menu-nav">
         <li className="Menu-navLink" onClick={importTransactions}>
           Unos transakcije

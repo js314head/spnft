@@ -1,0 +1,55 @@
+.SearchAndSort {
+  font-family: var(--font);
+  line-height: 1.1;
+
+  &-headline {
+    color: var(--dark-grey);
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  &-menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+  }
+
+  &-stats {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+
+    li {
+      padding-right: 1rem;
+
+      span {
+        color: var(--main-blue);
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-sort {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0.5rem;
+
+    li {
+      padding: 0rem 1rem;
+
+      span {
+        color: var(--main-blue);
+
+        .svg {
+          transform: scale(1.4);
+        }
+      }
+    }
+  }
+
+  &-line {
+    border: 1px solid var(--dark-grey);
+  }
+}
