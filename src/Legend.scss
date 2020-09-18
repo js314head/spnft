@@ -1,0 +1,16 @@
+.Legend {
+  &-list {
+    list-style: none;
+    display: flex;
+    padding: 0.5rem 0rem;
+    font-size: 1.1rem;
+    font-family: var(--font);
+    background-color: var(--grey);
+
+    li {
+      flex: 1;
+      align-self: center;
+      text-align: center;
+    }
+  }
+}

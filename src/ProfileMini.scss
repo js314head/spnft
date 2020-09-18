@@ -1,0 +1,20 @@
+.ProfileMini {
+  &-list {
+    list-style: none;
+    display: flex;
+    border: 1px solid var(--grey);
+    padding: 1.1rem 0rem;
+    font-size: 1.2rem;
+    font-family: var(--font);
+
+    .bold {
+      font-weight: 600;
+    }
+
+    li {
+      flex: 1;
+      align-self: center;
+      text-align: center;
+    }
+  }
+}
