@@ -9,14 +9,56 @@ const Customers = () => {
     <div className="Customers">
       <SearchAndSort />
       <Legend />
-      <ProfileMini />
-      <ProfileMini />
-      <ProfileMini />
-      <ProfileMini />
-      <ProfileMini />
-      <ProfileMini />
-      <ProfileMini />
-      <ProfileMini />
+      <div className="ProfileMini-box" data-simplebar>
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+        <ProfileMini />
+      </div>
     </div>
   );
 };

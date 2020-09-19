@@ -11,8 +11,8 @@ const ProfileMini = () => {
         <li>298 547,00</li>
         <li>85 501,00</li>
         <li>18.9.2020</li>
-        <button>Upiši transakciju</button>
-        <button>Detalji stranke</button>
+        <button className="ProfileMini-btn">Upiši transakciju</button>
+        <button className="ProfileMini-btn">Detalji stranke</button>
       </ul>
     </div>
   );

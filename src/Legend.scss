@@ -2,10 +2,11 @@
   &-list {
     list-style: none;
     display: flex;
-    padding: 0.5rem 0rem;
-    font-size: 1.1rem;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
     font-family: var(--font);
     background-color: var(--grey);
+    margin-right: 1rem;
 
     li {
       flex: 1;
@@ -13,4 +14,12 @@
       text-align: center;
     }
   }
+}
+
+.unvisible {
+  visibility: hidden;
+  width: 160px;
+  font-size: 1.1rem;
+  padding: 0.7rem 0rem;
+  margin: 0rem 1rem;
 }

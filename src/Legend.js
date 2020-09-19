@@ -10,7 +10,9 @@ const Legend = () => {
         <li>Broj transakcija</li>
         <li>Ukupne uplate (kn)</li>
         <li>Ukupne isplate (kn)</li>
-        <li>Datum posljednje transackije</li>
+        <li>Posljednja transakcija</li>
+        <button className="unvisible">Upiši transakciju</button>
+        <button className="unvisible">Detalji stranke</button>
       </ul>
     </div>
   );
