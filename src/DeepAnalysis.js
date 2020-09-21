@@ -5,7 +5,7 @@ const DeepAnalysis = () => {
   return (
     <div className="DeepAnalysis">
       <div className="DeepAnalysis-basic">
-        <p className="subHead">Osnovni podaci</p>
+        <p className="DeepAnalysis-subtitle">Osnovni podaci</p>
         <label htmlFor="name">
           Ime i prezime
           <input type="text" id="name" />
@@ -21,19 +21,21 @@ const DeepAnalysis = () => {
       </div>
 
       <div className="DeepAnalysis-id">
-        <p>Identifikacijska isprava</p>
-        <label htmlFor="osobna">
-          Osobna
-          <input type="radio" id="osobna" name="id" />
-        </label>
-        <label htmlFor="putovnica">
-          Putovnica
-          <input type="radio" id="putovnica" name="id" />
-        </label>
-        <label htmlFor="vozačka">
-          Vozačka
-          <input type="radio" id="vozačka" name="id" />
-        </label>
+        <div className="DeepAnalysis-idType">
+          <p className="DeepAnalysis-subtitle">Identifikacijska isprava</p>
+          <label htmlFor="osobna">
+            Osobna
+            <input type="radio" id="osobna" name="id" />
+          </label>
+          <label htmlFor="putovnica">
+            Putovnica
+            <input type="radio" id="putovnica" name="id" />
+          </label>
+          <label htmlFor="vozačka">
+            Vozačka
+            <input type="radio" id="vozačka" name="id" />
+          </label>
+        </div>
         <label htmlFor="oib">
           OIB
           <input type="text" id="oib" />
@@ -49,21 +51,23 @@ const DeepAnalysis = () => {
       </div>
 
       <div className="DeepAnalysis-rest">
-        <p className="subHead">Ostalo</p>
+        <p className="DeepAnalysis-subtitle">Ostalo</p>
         <label htmlFor="citizenship">
           Državljanstvo
           <input type="text" id="citizenship" />
         </label>
         <div className="DeepAnalysis-rest-politics">
-          <p>Politički izložena osobna</p>
-          <label htmlFor="PoliticianYes">
-            Da
-            <input type="radio" id="PoliticianYes" />
-          </label>
-          <label htmlFor="PoliticianNo">
-            Ne
-            <input type="radio" id="PoliticianNo" />
-          </label>
+          <div className="DeepAnalysis-radio">
+            <p>Politički izložena osobna</p>
+            <label htmlFor="PoliticianYes">
+              Da
+              <input type="radio" id="PoliticianYes" />
+            </label>
+            <label htmlFor="PoliticianNo">
+              Ne
+              <input type="radio" id="PoliticianNo" />
+            </label>
+          </div>
         </div>
         <div className="DeepAnalysis-rest-source">
           <p>Izvor informacija</p>

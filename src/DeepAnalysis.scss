@@ -1,10 +1,26 @@
 .DeepAnalysis {
+  width: 100%;
+  height: 100%;
   font-family: var(--font);
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50% 20%;
   grid-gap: 1rem;
+
+  input[type='radio'] {
+    box-sizing: border-box;
+    appearance: none;
+    background: white;
+    outline: 2px solid #333;
+    border: 3px solid white;
+    width: 16px;
+    height: 16px;
+  }
+
+  input[type='radio']:checked {
+    background: var(--main-blue);
+  }
 
   &-basic,
   &-id,
@@ -12,6 +28,44 @@
   &-remark {
     border: 1px solid var(--main-blue);
     font-family: var(--font);
-    padding: 1rem;
+    padding: 1rem 5%;
+
+    label {
+      font-size: 1.4rem;
+      color: var(--main-blue);
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      font-family: var(--font);
+      font-size: 2.2rem;
+      margin: 0.5rem 0 1rem 0;
+    }
   }
+
+  &-remark {
+    grid-column: 1 / span 3;
+  }
+
+  &-subtitle {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem 0 2rem 0;
+  }
+
+  &-idType {
+    text-align: center;
+
+    label {
+      display: inline-block;
+      text-align: center;
+      margin: 0 1.5rem 0 1.5rem;
+    }
+  }
+}
+
+.flex {
+  display: flex;
 }
