@@ -1,0 +1,17 @@
+.DeepAnalysis {
+  font-family: var(--font);
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  grid-gap: 1rem;
+
+  &-basic,
+  &-id,
+  &-rest,
+  &-remark {
+    border: 1px solid var(--main-blue);
+    font-family: var(--font);
+    padding: 1rem;
+  }
+}

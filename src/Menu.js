@@ -31,6 +31,9 @@ const Menu = ({
         <li className="Menu-navLink" onClick={law}>
           Zakon
         </li>
+        <li className="Menu-navLink" onClick={law}>
+          Linkovi
+        </li>
         <li className="Menu-navLink" onClick={settings}>
           Postavke
         </li>
