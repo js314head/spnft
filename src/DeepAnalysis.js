@@ -18,6 +18,10 @@ const DeepAnalysis = () => {
           Datum rođenja
           <input type="text" id="dateOfBirth" />
         </label>
+        <label htmlFor="oib">
+          OIB
+          <input type="text" id="oib" />
+        </label>
       </div>
 
       <div className="DeepAnalysis-id">
@@ -36,10 +40,7 @@ const DeepAnalysis = () => {
             <input type="radio" id="vozačka" name="id" />
           </label>
         </div>
-        <label htmlFor="oib">
-          OIB
-          <input type="text" id="oib" />
-        </label>
+
         <label htmlFor="brojDokumenta">
           Broj isprave i izdavatelj
           <input type="text" id="brojDokumenta" />
@@ -48,72 +49,88 @@ const DeepAnalysis = () => {
           Država izdavatelja
           <input type="text" id="državaDokumenta" />
         </label>
-      </div>
-
-      <div className="DeepAnalysis-rest">
-        <p className="DeepAnalysis-subtitle">Ostalo</p>
         <label htmlFor="citizenship">
           Državljanstvo
           <input type="text" id="citizenship" />
         </label>
-        <div className="DeepAnalysis-rest-politics">
-          <div className="DeepAnalysis-radio">
-            <p>Politički izložena osobna</p>
-            <label htmlFor="PoliticianYes">
-              Da
-              <input type="radio" id="PoliticianYes" />
-            </label>
-            <label htmlFor="PoliticianNo">
-              Ne
-              <input type="radio" id="PoliticianNo" />
-            </label>
-          </div>
-        </div>
+      </div>
+
+      <div className="DeepAnalysis-rest">
+        <p className="DeepAnalysis-subtitle">Ostalo</p>
+
         <div className="DeepAnalysis-rest-source">
-          <p>Izvor informacija</p>
-          <label htmlFor="SourceSpeak">
-            Usmena izjava
-            <input type="radio" id="SourceSpeak" />
-          </label>
-          <label htmlFor="SourceWrite">
-            Pisana izjava
-            <input type="radio" id="SourceWrite" />
-          </label>
+          <div className="checkbox-container">
+            <p>Izvor informacija :</p>
+            <div className="options">
+              <label htmlFor="SourceSpeak">
+                Usmeno
+                <input type="radio" id="SourceSpeak" name="source" />
+              </label>
+              <label htmlFor="SourceWrite">
+                Pismeno
+                <input type="radio" id="SourceWrite" name="source" />
+              </label>
+            </div>
+          </div>
         </div>
 
         <div className="DeepAnalysis-rest-transaction">
-          <p>Transakcije u</p>
-          <label htmlFor="TransactionCasino">
-            Casino
-            <input type="radio" id="TransactionCasino" />
-          </label>
-          <label htmlFor="TransactionChange">
-            Mjenjačnica
-            <input type="radio" id="TransactionChange" />
-          </label>
-          <label htmlFor="TransactionPOS">
-            POS
-            <input type="radio" id="TransactionPOS" />
-          </label>
+          <div className="checkbox-container">
+            <p>Transakcije u :</p>
+            <div className="options">
+              <label htmlFor="TransactionCasino">
+                Casino
+                <input type="radio" id="TransactionCasino" name="transaction" />
+              </label>
+              <label htmlFor="TransactionChange">
+                Mjenjačnica
+                <input type="radio" id="TransactionChange" name="transaction" />
+              </label>
+              <label htmlFor="TransactionPOS">
+                POS
+                <input type="radio" id="TransactionPOS" name="transaction" />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div className="DeepAnalysis-rest-politics">
+          <div className="DeepAnalysis-radio">
+            <div className="checkbox-container">
+              <p>Politički izložena osobna :</p>
+              <div className="options">
+                <label htmlFor="PoliticianYes">
+                  Da
+                  <input type="radio" id="PoliticianYes" name="politician" />
+                </label>
+                <label htmlFor="PoliticianNo">
+                  Ne
+                  <input type="radio" id="PoliticianNo" name="politician" />
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="DeepAnalysis-rest-suspicious">
-          <p>Stranka je sumnjiva osoba</p>
-          <label htmlFor="SuspiciousYes">
-            Da
-            <input type="radio" id="SuspiciousYes" />
-          </label>
-          <label htmlFor="SuspiciousNo">
-            Ne
-            <input type="radio" id="SuspiciousNo" />
-          </label>
+          <div className="checkbox-container">
+            <p>Stranka je sumnjiva osoba :</p>
+            <div className="options">
+              <label htmlFor="SuspiciousYes">
+                Da
+                <input type="radio" id="SuspiciousYes" name="suspicious" />
+              </label>
+              <label htmlFor="SuspiciousNo">
+                Ne
+                <input type="radio" id="SuspiciousNo" name="suspicious" />
+              </label>
+            </div>
+          </div>
         </div>
       </div>
       <div className="DeepAnalysis-remark">
-        <label>
-          Napomena
-          <textarea />
-        </label>
+        <textarea placeholder="Napomena" />
+        <button className="DeepAnalysis-remark-btn">Kreiraj stranku</button>
       </div>
     </div>
   );
