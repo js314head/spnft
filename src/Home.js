@@ -3,6 +3,7 @@ import Menu from './Menu';
 import Customers from './Customers';
 import createCustomer from './CreateCustomer';
 import Law from './Law';
+import Links from './Links';
 import Settings from './Settings';
 import './Home.scss';
 import CreateCustomer from './CreateCustomer';
@@ -21,6 +22,9 @@ const Home = ({ handleLogout, user }) => {
   const law = () => {
     setPage('law');
   };
+  const links = () => {
+    setPage('links');
+  };
 
   const settings = () => {
     setPage('settings');
@@ -32,6 +36,7 @@ const Home = ({ handleLogout, user }) => {
         handleLogout={handleLogout}
         createCustomer={createCustomer}
         law={law}
+        links={links}
         settings={settings}
         importTransactions={importTransactions}
         page={page}
@@ -40,6 +45,7 @@ const Home = ({ handleLogout, user }) => {
       {page === 'home' ? <Customers /> : null}
       {page === 'createCustomer' ? <CreateCustomer /> : null}
       {page === 'law' ? <Law /> : null}
+      {page === 'links' ? <Links /> : null}
       {page === 'settings' ? <Settings /> : null}
     </div>
   );

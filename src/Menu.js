@@ -7,6 +7,7 @@ const Menu = ({
   handleLogout,
   createCustomer,
   law,
+  links,
   settings,
   importTransactions,
   page,
@@ -31,7 +32,7 @@ const Menu = ({
         <li className="Menu-navLink" onClick={law}>
           Zakon
         </li>
-        <li className="Menu-navLink" onClick={law}>
+        <li className="Menu-navLink" onClick={links}>
           Linkovi
         </li>
         <li className="Menu-navLink" onClick={settings}>
