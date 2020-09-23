@@ -1,20 +1,22 @@
+@import './mixins';
+
 .DeepAnalysis {
-  width: 100%;
-  height: 100%;
-  font-family: var(--font);
-  margin-top: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 55% 15%;
   grid-gap: 1rem;
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  font-family: var(--font);
 
   &-basic,
   &-id,
   &-rest,
   &-remark {
-    border: 1px solid var(--main-blue);
-    font-family: var(--font);
     padding: 1rem 5%;
+    border: var(--default-border);
+    font-family: var(--font);
 
     label {
       font-size: 1.2rem;
@@ -24,10 +26,10 @@
 
     input {
       display: block;
+      margin: 0.5rem 0 1rem 0;
       width: 100%;
       font-family: var(--font);
       font-size: 2.2rem;
-      margin: 0.5rem 0 1rem 0;
 
       &:focus,
       &:active {
@@ -44,8 +46,9 @@
 
     textarea {
       width: 80%;
-      font-size: 1.5rem;
       font-family: var(--font);
+      font-size: 1.5rem;
+      resize: none;
 
       &:active,
       &:focus {
@@ -54,18 +57,12 @@
     }
 
     &-btn {
+      @include button(2px);
       width: 18%;
-      color: var(--main-blue);
-      font-family: var(--font);
       font-size: 1.7rem;
-      background-color: white;
-      border: 2px solid var(--main-blue);
-      transition: all 0.4s ease-in-out;
-      cursor: pointer;
 
       &:hover {
-        background-color: var(--main-blue);
-        color: white;
+        @include buttonHover();
       }
 
       &:active,
@@ -76,21 +73,21 @@
   }
 
   &-subtitle {
-    font-weight: 600;
-    font-size: 1.5rem;
-    text-align: center;
     margin: 0.5rem 0 2rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
   }
 
   &-idType {
-    text-align: center;
     margin-bottom: 2rem;
+    text-align: center;
 
     label {
       display: inline-block;
-      text-align: center;
       margin: 0 1.5rem 0 1.5rem;
       font-size: 1.1rem;
+      text-align: center;
     }
   }
 
@@ -103,8 +100,8 @@
     }
 
     p {
-      color: var(--main-blue);
       font-size: 1.2rem;
+      color: var(--main-blue);
     }
 
     label {
@@ -115,13 +112,13 @@
 
   input[type='radio'] {
     box-sizing: border-box;
-    appearance: none;
-    background: white;
-    outline: 2px solid #333;
-    border: 3px solid white;
+    margin: 1rem auto 0.5rem auto;
     width: 15px;
     height: 15px;
-    margin: 1rem auto 0.5rem auto;
+    outline: 2px solid #333;
+    border: 3px solid white;
+    background: white;
+    appearance: none;
     cursor: pointer;
   }
 

@@ -1,17 +1,16 @@
 .Customers {
-  width: 100%;
   box-sizing: border-box;
-  background-color: var(--light-blue);
+  width: 100%;
   padding: 1.5rem 3rem;
+  background-color: var(--light-blue);
   overflow: hidden;
 }
 
 .ProfileMini-box {
   height: 70%;
   overflow: auto;
-  scrollbar-color: red;
 }
 
 .simplebar-scrollbar:before {
-  background-color: var(--main-blue);
+  background-color: var(--scrollbar-color);
 }

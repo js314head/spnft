@@ -1,0 +1,20 @@
+@mixin flexContainer($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button($border) {
+  font-family: var(--font);
+  color: var(--main-blue);
+  background-color: white;
+  border: $border solid var(--main-blue);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+@mixin buttonHover() {
+  background-color: var(--main-blue);
+  color: white;
+}

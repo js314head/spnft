@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import Menu from './Menu';
 import Customers from './Customers';
-import createCustomer from './CreateCustomer';
+import CreateCustomer from './CreateCustomer';
 import Law from './Law';
 import Links from './Links';
 import Settings from './Settings';
 import './Home.scss';
-import CreateCustomer from './CreateCustomer';
 
 const Home = ({ handleLogout, user }) => {
   const [page, setPage] = useState('home');

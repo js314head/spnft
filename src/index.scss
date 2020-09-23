@@ -1,11 +1,4 @@
-:root {
-  --main-blue: #1bb6c1;
-  --light-blue: #fafcfd;
-  --background: #f3f3f3;
-  --grey: #e2e7ec;
-  --dark-grey: #a7b6c6;
-  --font: 'Montserrat', sans-serif;
-}
+@import './parameters';
 
 body {
   background-color: var(--background);

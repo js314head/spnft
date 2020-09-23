@@ -1,12 +1,14 @@
+@import './mixins';
+
 .ProfileMini {
   &-list {
-    list-style: none;
     display: flex;
-    border: 1px solid var(--grey);
-    padding: 0.7rem 1rem;
-    font-size: 1.2rem;
-    font-family: var(--font);
     margin-right: 1rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--grey);
+    font-family: var(--font);
+    font-size: 1.2rem;
+    list-style: none;
 
     .bold {
       font-weight: 600;
@@ -20,20 +22,14 @@
   }
 
   &-btn {
+    @include button(2px);
     width: 160px;
-    color: var(--main-blue);
-    font-size: 1.1rem;
-    padding: 0.7rem 0rem;
     margin: 0rem 1rem;
-    font-family: var(--font);
-    background-color: white;
-    border: 2px solid var(--main-blue);
-    transition: all 0.4s ease-in-out;
-    cursor: pointer;
+    padding: 0.7rem 0rem;
+    font-size: 1.1rem;
 
     &:hover {
-      background-color: var(--main-blue);
-      color: white;
+      @include buttonHover();
     }
   }
 }

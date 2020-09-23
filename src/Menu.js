@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './Menu.scss';
+import React from 'react';
 import logo from './images/logo.png';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import './Menu.scss';
 
 const Menu = ({
   handleLogout,
@@ -10,7 +10,6 @@ const Menu = ({
   links,
   settings,
   importTransactions,
-  page,
   user,
 }) => {
   return (

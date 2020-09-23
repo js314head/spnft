@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Home from './Home';
-import './Login.scss';
 import logo from './images/logo.png';
 import fire from './fire';
+import './Login.scss';
 
 const Login = () => {
   const [user, setUser] = useState('');
