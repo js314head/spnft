@@ -18,3 +18,57 @@
   background-color: var(--main-blue);
   color: white;
 }
+
+@mixin analysisContainer() {
+  padding: 1rem 5%;
+  border: var(--default-border);
+  font-family: var(--font);
+}
+
+@mixin inputStyle() {
+  input {
+    display: block;
+    margin: 0.5rem 0 1rem 0;
+    width: 100%;
+    font-family: var(--font);
+    font-size: 2.2rem;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}
+
+@mixin labelStyle() {
+  label {
+    font-size: 1.2rem;
+    color: var(--main-blue);
+    cursor: pointer;
+  }
+}
+
+@mixin subHead() {
+  margin: 0.5rem 0 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@mixin radioStyle() {
+  input[type='radio'] {
+    box-sizing: border-box;
+    margin: 1rem auto 0.5rem auto;
+    width: 15px;
+    height: 15px;
+    outline: 2px solid #333;
+    border: 3px solid white;
+    background: white;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  input[type='radio']:checked {
+    background: var(--main-blue);
+  }
+}

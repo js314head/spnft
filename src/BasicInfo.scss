@@ -1,0 +1,11 @@
+@import './mixins';
+
+.BasicInfo {
+  @include inputStyle;
+  @include labelStyle;
+  @include analysisContainer;
+
+  &-subtitle {
+    @include subHead;
+  }
+}

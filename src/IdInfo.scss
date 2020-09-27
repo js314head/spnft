@@ -1,0 +1,23 @@
+@import './mixins';
+
+.IdInfo {
+  @include inputStyle;
+  @include labelStyle;
+  @include analysisContainer;
+  @include radioStyle;
+
+  &-subtitle {
+    @include subHead;
+  }
+
+  &-idType {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    label {
+      display: inline-block;
+      margin: 0 1.5rem 0rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+}
