@@ -1,35 +1,77 @@
 import React from 'react';
 import './IdInfo.scss';
 
-const IdInfo = () => {
+const IdInfo = ({
+  id,
+  setId,
+  idNumber,
+  setIdNumber,
+  idCountry,
+  setIdCountry,
+  citizenship,
+  setCitizenship,
+}) => {
   return (
     <div className="IdInfo">
       <p className="IdInfo-subtitle">Identifikacijska isprava</p>
       <div className="IdInfo-idType">
         <label htmlFor="osobna">
           Osobna
-          <input type="radio" id="osobna" name="id" />
+          <input
+            type="radio"
+            id="osobna"
+            name="id"
+            value={id}
+            onChange={(e) => setId(e.target.checked ? 'osobna' : null)}
+          />
         </label>
         <label htmlFor="putovnica">
           Putovnica
-          <input type="radio" id="putovnica" name="id" />
+          <input
+            type="radio"
+            id="putovnica"
+            name="id"
+            value={id}
+            onChange={(e) => setId(e.target.checked ? 'putovnica' : null)}
+          />
         </label>
         <label htmlFor="vozačka">
           Vozačka
-          <input type="radio" id="vozačka" name="id" />
+          <input
+            type="radio"
+            id="vozačka"
+            name="id"
+            value={id}
+            onChange={(e) => setId(e.target.checked ? 'vozačka' : null)}
+          />
         </label>
       </div>
-      <label htmlFor="brojDokumenta">
+      <label htmlFor="idNumber">
         Broj isprave i izdavatelj
-        <input type="text" id="brojDokumenta" />
+        <input
+          type="text"
+          id="idNumber"
+          value={idNumber}
+          onChange={(e) => setIdNumber(e.target.value)}
+        />
       </label>
-      <label htmlFor="državaDokumenta">
+      <label htmlFor="idCountry">
         Država izdavatelja
-        <input type="text" id="državaDokumenta" />
+        <input
+          type="text"
+          id="idCountry"
+          value={idCountry}
+          onChange={(e) => setIdCountry(e.target.value)}
+        />
       </label>
       <label htmlFor="citizenship">
         Državljanstvo
-        <input type="text" id="citizenship" />
+        <input
+          type="text"
+          id="citizenship"
+          value={citizenship}
+          onChange={(e) => setCitizenship(e.target.value)}
+        />
       </label>
     </div>
   );

@@ -1,7 +1,16 @@
 import React from 'react';
 import './RestInfo.scss';
 
-const RestInfo = () => {
+const RestInfo = ({
+  source,
+  setSource,
+  transaction,
+  setTransaction,
+  politics,
+  setPolitics,
+  suspisious,
+  setSuspicious,
+}) => {
   return (
     <div className="RestInfo">
       <p className="RestInfo-subtitle">Ostalo</p>
@@ -13,11 +22,27 @@ const RestInfo = () => {
             <div className="options">
               <label htmlFor="SourceSpeak">
                 Usmeno
-                <input type="radio" id="SourceSpeak" name="source" />
+                <input
+                  type="radio"
+                  id="SourceSpeak"
+                  name="source"
+                  source={source}
+                  onChange={(e) =>
+                    setSource(e.target.checked ? 'Usmeno' : null)
+                  }
+                />
               </label>
               <label htmlFor="SourceWrite">
                 Pismeno
-                <input type="radio" id="SourceWrite" name="source" />
+                <input
+                  type="radio"
+                  id="SourceWrite"
+                  name="source"
+                  source={source}
+                  onChange={(e) =>
+                    setSource(e.target.checked ? 'Pismeno' : null)
+                  }
+                />
               </label>
             </div>
           </div>
@@ -29,15 +54,39 @@ const RestInfo = () => {
             <div className="options">
               <label htmlFor="TransactionCasino">
                 Casino
-                <input type="radio" id="TransactionCasino" name="transaction" />
+                <input
+                  type="radio"
+                  id="TransactionCasino"
+                  name="transaction"
+                  value={transaction}
+                  onChange={(e) =>
+                    setTransaction(e.target.checked ? 'Casino' : null)
+                  }
+                />
               </label>
               <label htmlFor="TransactionChange">
                 Mjenjačnica
-                <input type="radio" id="TransactionChange" name="transaction" />
+                <input
+                  type="radio"
+                  id="TransactionChange"
+                  name="transaction"
+                  value={transaction}
+                  onChange={(e) =>
+                    setTransaction(e.target.checked ? 'Mjenjačnica' : null)
+                  }
+                />
               </label>
               <label htmlFor="TransactionPOS">
                 POS
-                <input type="radio" id="TransactionPOS" name="transaction" />
+                <input
+                  type="radio"
+                  id="TransactionPOS"
+                  name="transaction"
+                  value={transaction}
+                  onChange={(e) =>
+                    setTransaction(e.target.checked ? 'POS' : null)
+                  }
+                />
               </label>
             </div>
           </div>
@@ -50,11 +99,27 @@ const RestInfo = () => {
               <div className="options">
                 <label htmlFor="PoliticianYes">
                   Da
-                  <input type="radio" id="PoliticianYes" name="politician" />
+                  <input
+                    type="radio"
+                    id="PoliticianYes"
+                    name="politician"
+                    value={politics}
+                    onChange={(e) =>
+                      setPolitics(e.target.checked ? 'Da' : null)
+                    }
+                  />
                 </label>
                 <label htmlFor="PoliticianNo">
                   Ne
-                  <input type="radio" id="PoliticianNo" name="politician" />
+                  <input
+                    type="radio"
+                    id="PoliticianNo"
+                    name="politician"
+                    value={politics}
+                    onChange={(e) =>
+                      setPolitics(e.target.checked ? 'Ne' : null)
+                    }
+                  />
                 </label>
               </div>
             </div>
@@ -67,11 +132,27 @@ const RestInfo = () => {
             <div className="options">
               <label htmlFor="SuspiciousYes">
                 Da
-                <input type="radio" id="SuspiciousYes" name="suspicious" />
+                <input
+                  type="radio"
+                  id="SuspiciousYes"
+                  name="suspicious"
+                  value={suspisious}
+                  onChange={(e) =>
+                    setSuspicious(e.target.checked ? 'Da' : null)
+                  }
+                />
               </label>
               <label htmlFor="SuspiciousNo">
                 Ne
-                <input type="radio" id="SuspiciousNo" name="suspicious" />
+                <input
+                  type="radio"
+                  id="SuspiciousNo"
+                  name="suspicious"
+                  value={suspisious}
+                  onChange={(e) =>
+                    setSuspicious(e.target.checked ? 'Ne' : null)
+                  }
+                />
               </label>
             </div>
           </div>
