@@ -4,10 +4,10 @@
   &-list {
     display: flex;
     margin-right: 1rem;
-    padding: 0.7rem 1rem;
+    padding: 0.4rem 0.5rem;
     border: 1px solid var(--grey);
     font-family: var(--font);
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     list-style: none;
 
     .bold {
@@ -23,10 +23,10 @@
 
   &-btn {
     @include button(2px);
-    width: 160px;
+    width: 120px;
     margin: 0rem 1rem;
     padding: 0.7rem 0rem;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
 
     &:hover {
       @include buttonHover();

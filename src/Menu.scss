@@ -4,13 +4,13 @@
 .Menu {
   @include flexContainer(column, space-between, strecth);
   box-sizing: border-box;
-  width: 370px;
+  width: 250px;
   background-color: white;
-  padding: 3.5rem 2rem;
+  padding: 3rem 1rem;
   border-right: 1px solid var(--grey);
 
   &-logo {
-    width: 210px;
+    width: 130px;
     align-self: center;
     cursor: pointer;
   }
@@ -23,7 +23,7 @@
     display: block;
     margin: 1.5rem 0rem;
     font-family: var(--font);
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-decoration: none;
     color: var(--dark-grey);
     text-transform: uppercase;
@@ -33,23 +33,22 @@
 
   &-user {
     color: var(--dark-grey);
-    font-size: 1.3rem;
+    font-size: 0.8rem;
   }
 
   &-logout {
     align-self: center;
 
     .svg {
-      margin-right: 10px;
-      transform: scale(1.4);
+      margin-right: 2px;
       color: var(--main-blue);
     }
 
     &-btn {
       @include button(2px);
-      width: 250px;
-      padding: 0.7rem 0rem;
-      font-size: 1.2rem;
+      width: 150px;
+      padding: 0.2rem 0rem;
+      font-size: 1rem;
 
       &:hover {
         @include buttonHover();

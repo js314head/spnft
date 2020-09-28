@@ -3,7 +3,7 @@
   line-height: 1.1;
 
   &-headline {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0;
     color: var(--dark-grey);
   }
@@ -11,7 +11,7 @@
   &-menu {
     display: flex;
     justify-content: space-between;
-    font-size: 1.1rem;
+    font-size: 0.7rem;
   }
 
   &-stats {
@@ -25,7 +25,7 @@
 
       span {
         color: var(--main-blue);
-        font-size: 1.3rem;
+        font-size: 0.9rem;
         font-weight: 600;
       }
     }
@@ -41,10 +41,6 @@
 
       span {
         color: var(--main-blue);
-
-        .svg {
-          transform: scale(1.4);
-        }
       }
     }
   }

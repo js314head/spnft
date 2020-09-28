@@ -2,11 +2,11 @@
   &-list {
     display: flex;
     margin-right: 1rem;
-    padding: 0.7rem 1rem;
+    padding: 0rem 1rem;
     background-color: var(--grey);
     list-style: none;
     font-family: var(--font);
-    font-size: 1rem;
+    font-size: 0.7rem;
 
     li {
       flex: 1;
@@ -18,8 +18,8 @@
 
 .unvisible {
   visibility: hidden;
-  width: 160px;
+  width: 120px;
   margin: 0rem 1rem;
   padding: 0.7rem 0rem;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
