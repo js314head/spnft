@@ -5,6 +5,7 @@
   padding: 1.5rem 3rem;
   font-family: var(--font);
   line-height: 1.1;
+  animation: slider 0.8s;
 
   &-headline {
     color: var(--dark-grey);
@@ -40,5 +41,16 @@
       color: var(--main-blue);
       font-size: 1rem;
     }
+  }
+}
+
+@keyframes slider {
+  from {
+    transform: translateX(2000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }

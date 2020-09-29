@@ -22,19 +22,27 @@ const Menu = ({
       />
 
       <ul className="Menu-nav">
-        <li className="Menu-navLink" onClick={importTransactions}>
+        <li
+          className="Menu-navLink"
+          id="unosTransakcije"
+          onClick={importTransactions}
+        >
           Unos transakcije
         </li>
-        <li className="Menu-navLink" onClick={createCustomer}>
+        <li
+          className="Menu-navLink"
+          id="kreiranjeStranke"
+          onClick={createCustomer}
+        >
           Kreiranje stranke
         </li>
-        <li className="Menu-navLink" onClick={law}>
+        <li className="Menu-navLink" id="zakon" onClick={law}>
           Zakon
         </li>
-        <li className="Menu-navLink" onClick={links}>
+        <li className="Menu-navLink" id="linkovi" onClick={links}>
           Linkovi
         </li>
-        <li className="Menu-navLink" onClick={settings}>
+        <li className="Menu-navLink" id="postavke" onClick={settings}>
           Postavke
         </li>
       </ul>

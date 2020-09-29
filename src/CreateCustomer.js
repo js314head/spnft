@@ -6,7 +6,7 @@ const CreateCustomer = ({ handleLogout }) => {
   return (
     <div className="CreateCustomer">
       <h1 className="CreateCustomer-headline">Kreiraj stranku</h1>
-      <hr class="CreateCustomer-line"></hr>
+      <hr className="CreateCustomer-line"></hr>
       <div className="CreateCustomer-head">
         <h1>Dubinska analiza stranke</h1>
         <p>

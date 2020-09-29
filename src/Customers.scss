@@ -4,6 +4,7 @@
   padding: 1.5rem;
   background-color: var(--light-blue);
   overflow: hidden;
+  animation: slider 0.8s;
 }
 
 .ProfileMini-box {
@@ -13,4 +14,15 @@
 
 .simplebar-scrollbar:before {
   background-color: var(--scrollbar-color);
+}
+
+@keyframes slider {
+  from {
+    transform: translateX(2000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }

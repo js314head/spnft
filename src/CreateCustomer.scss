@@ -6,6 +6,7 @@
   overflow: hidden;
   font-family: var(--font);
   line-height: 1.1;
+  animation: slider 0.8s;
 
   &-headline {
     font-size: 1.8rem;
@@ -27,5 +28,16 @@
     h1 {
       margin: 0.2rem 0;
     }
+  }
+}
+
+@keyframes slider {
+  from {
+    transform: translateX(2000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }

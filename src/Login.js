@@ -47,7 +47,6 @@ const Login = () => {
   const authListener = () => {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
-        console.log(user.email);
         clearInputs();
         setUser(user);
       } else {

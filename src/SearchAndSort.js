@@ -35,7 +35,7 @@ const SearchAndSort = () => {
           </ul>
         </div>
       </div>
-      <hr class="SearchAndSort-line"></hr>
+      <hr className="SearchAndSort-line"></hr>
     </div>
   );
 };

@@ -1,8 +1,10 @@
 .Home {
   display: flex;
-  width: 88vw;
+  width: 92vw;
   height: 86vh;
   margin: 5vh auto;
   border: var(--default-border);
   box-shadow: var(--box-shadow);
+  background-color: #fff;
+  overflow: hidden;
 }
