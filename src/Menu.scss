@@ -4,13 +4,13 @@
 .Menu {
   @include flexContainer(column, space-between, strecth);
   box-sizing: border-box;
-  width: 250px;
+  width: 260px;
   background-color: white;
-  padding: 3rem 1rem;
+  padding: 2.5rem 1.5rem;
   border-right: 1px solid var(--grey);
 
   &-logo {
-    width: 130px;
+    width: 150px;
     align-self: center;
     cursor: pointer;
   }
@@ -23,7 +23,7 @@
     display: block;
     margin: 1.5rem 0rem;
     font-family: var(--font);
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-decoration: none;
     color: var(--dark-grey);
     text-transform: uppercase;
@@ -46,7 +46,7 @@
 
     &-btn {
       @include button(2px);
-      width: 150px;
+      width: 160px;
       padding: 0.2rem 0rem;
       font-size: 1rem;
 

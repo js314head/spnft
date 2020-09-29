@@ -1,15 +1,15 @@
 .CreateCustomer {
   box-sizing: border-box;
   width: 100%;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem;
   background-color: var(--light-blue);
   overflow: hidden;
   font-family: var(--font);
   line-height: 1.1;
 
   &-headline {
+    font-size: 1.8rem;
     margin-bottom: 0;
-    font-size: 3rem;
     color: var(--dark-grey);
   }
 
@@ -18,14 +18,14 @@
   }
 
   &-head {
-    padding: 0.2rem 1rem;
+    padding: 0.1rem 1rem;
     background-color: var(--grey);
     font-family: var(--font);
-    font-size: 1rem;
+    font-size: 0.65rem;
     text-align: center;
 
     h1 {
-      margin: 0.5rem 0;
+      margin: 0.2rem 0;
     }
   }
 }

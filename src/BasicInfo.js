@@ -35,7 +35,7 @@ const BasicInfo = ({
       <label htmlFor="dateOfBirth">
         Datum rođenja
         <input
-          type="text"
+          type="date"
           id="dateOfBirth"
           value={dateOfBirth}
           onChange={(e) => setDateOfBirth(e.target.value)}
