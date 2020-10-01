@@ -9,7 +9,7 @@ const TextArea = ({ remark, setRemark, createCustomer }) => {
         value={remark}
         onChange={(e) => setRemark(e.target.value)}
       />
-      <button className="TextArea-btn" onClick={createCustomer}>
+      <button type="submit" className="TextArea-btn" onClick={createCustomer}>
         Kreiraj stranku
       </button>
     </div>

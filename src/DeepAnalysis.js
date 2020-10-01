@@ -4,7 +4,7 @@ import BasicInfo from './BasicInfo';
 import IdInfo from './IdInfo';
 import RestInfo from './RestInfo';
 import TextArea from './TextArea';
-import { Policy } from '@material-ui/icons';
+import fire from './fire';
 
 const DeepAnalysis = () => {
   const [name, setName] = useState('');
@@ -20,25 +20,10 @@ const DeepAnalysis = () => {
   const [politics, setPolitics] = useState('');
   const [suspicious, setSuspicious] = useState('');
   const [remark, setRemark] = useState('');
+  const userRef = fire.database().ref('users');
 
   const createCustomer = (e) => {
     e.preventDefault();
-    let user = {
-      Ime: name,
-      Adresa: adress,
-      'Datum rođenja': dateOfBirth,
-      OIB: oib,
-      'Vrsta dokumenta': id,
-      'Broj dokumenta': idNumber,
-      'Država izdavatelja dokumenta': idCountry,
-      Državljanstvo: citizenship,
-      'Izvor informacija': source,
-      'Vrsta transackije': transaction,
-      'Politički izložena stranka': politics,
-      'Sumnjiva stranka': suspicious,
-      Napomena: remark,
-    };
-    console.log(user);
     setName('');
     setAdress('');
     setDateOfBirth('');
@@ -52,6 +37,23 @@ const DeepAnalysis = () => {
     setPolitics('');
     setSuspicious('');
     setRemark('');
+
+    let newUser = userRef.push();
+    newUser.set({
+      Ime: name,
+      Adresa: adress,
+      'Datum rođenja': dateOfBirth,
+      OIB: oib,
+      'Vrsta dokumenta': id,
+      'Broj dokumenta': idNumber,
+      'Država izdavatelja dokumenta': idCountry,
+      Državljanstvo: citizenship,
+      'Izvor informacija': source,
+      'Vrsta transackije': transaction,
+      'Politički izložena stranka': politics,
+      'Sumnjiva stranka': suspicious,
+      Napomena: remark,
+    });
   };
 
   return (

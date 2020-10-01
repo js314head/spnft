@@ -33,11 +33,11 @@
 
 @keyframes slider {
   from {
-    transform: translateX(2000px);
+    transform: translateY(2000px);
     opacity: 0;
   }
   to {
-    transform: translateX(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }

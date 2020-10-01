@@ -18,6 +18,7 @@ const IdInfo = ({
         <label htmlFor="osobna">
           Osobna
           <input
+            required
             type="radio"
             id="osobna"
             name="id"
@@ -28,6 +29,7 @@ const IdInfo = ({
         <label htmlFor="putovnica">
           Putovnica
           <input
+            required
             type="radio"
             id="putovnica"
             name="id"
@@ -38,6 +40,7 @@ const IdInfo = ({
         <label htmlFor="vozačka">
           Vozačka
           <input
+            required
             type="radio"
             id="vozačka"
             name="id"
@@ -49,6 +52,7 @@ const IdInfo = ({
       <label htmlFor="idNumber">
         Broj isprave i izdavatelj
         <input
+          required
           type="text"
           id="idNumber"
           value={idNumber}
@@ -58,6 +62,7 @@ const IdInfo = ({
       <label htmlFor="idCountry">
         Država izdavatelja
         <input
+          required
           type="text"
           id="idCountry"
           value={idCountry}

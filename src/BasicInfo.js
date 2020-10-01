@@ -17,6 +17,7 @@ const BasicInfo = ({
       <label htmlFor="name">
         Ime i prezime
         <input
+          required
           type="text"
           id="name"
           value={name}
@@ -26,6 +27,7 @@ const BasicInfo = ({
       <label htmlFor="adress">
         Prebivalište
         <input
+          required
           type="text"
           id="adress"
           value={adress}
@@ -35,6 +37,7 @@ const BasicInfo = ({
       <label htmlFor="dateOfBirth">
         Datum rođenja
         <input
+          required
           type="date"
           id="dateOfBirth"
           value={dateOfBirth}
@@ -44,6 +47,7 @@ const BasicInfo = ({
       <label htmlFor="oib">
         OIB
         <input
+          required
           type="text"
           id="oib"
           value={oib}
