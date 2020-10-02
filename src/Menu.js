@@ -6,9 +6,7 @@ import './Menu.scss';
 const Menu = ({
   handleLogout,
   createCustomer,
-  law,
   links,
-  settings,
   importTransactions,
   user,
 }) => {
@@ -36,14 +34,9 @@ const Menu = ({
         >
           Kreiranje stranke
         </li>
-        <li className="Menu-navLink" id="zakon" onClick={law}>
-          Zakon
-        </li>
+
         <li className="Menu-navLink" id="linkovi" onClick={links}>
           Linkovi
-        </li>
-        <li className="Menu-navLink" id="postavke" onClick={settings}>
-          Postavke
         </li>
       </ul>
       <div className="Menu-logout">
