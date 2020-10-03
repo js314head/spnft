@@ -3,6 +3,7 @@ import './DeepAnalysis.scss';
 import BasicInfo from './BasicInfo';
 import IdInfo from './IdInfo';
 import RestInfo from './RestInfo';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import fire from './fire';
 
 const DeepAnalysis = () => {
@@ -18,10 +19,13 @@ const DeepAnalysis = () => {
   const [politics, setPolitics] = useState('');
   const [suspicious, setSuspicious] = useState('');
   const [remark, setRemark] = useState('');
+  const [sendingData, setSendingData] = useState(false);
   const userRef = fire.database().ref('users');
 
   const createCustomer = (e) => {
     e.preventDefault();
+
+    setSendingData(true);
     setName('');
     setAdress('');
     setDateOfBirth('');
@@ -50,6 +54,10 @@ const DeepAnalysis = () => {
       'Sumnjiva stranka': suspicious,
       Napomena: remark,
     });
+
+    setTimeout(() => {
+      setSendingData(false);
+    }, 4000);
   };
 
   return (
@@ -82,16 +90,25 @@ const DeepAnalysis = () => {
         suspicious={suspicious}
         setSuspicious={setSuspicious}
       />
-      <div className="TextArea">
-        <textarea
-          placeholder="Napomena"
-          value={remark}
-          onChange={(e) => setRemark(e.target.value)}
-        />
-        <button type="submit" className="TextArea-btn">
-          Kreiraj stranku
-        </button>
-      </div>
+      {sendingData ? (
+        <div className="TextArea-info">
+          <p>
+            <CheckCircleIcon className="TextArea-info-icon" />
+            Uspješno ste kreirali stranku!
+          </p>
+        </div>
+      ) : (
+        <div className="TextArea">
+          <textarea
+            placeholder="Napomena"
+            value={remark}
+            onChange={(e) => setRemark(e.target.value)}
+          />
+          <button type="submit" className="TextArea-btn">
+            Kreiraj stranku
+          </button>
+        </div>
+      )}
     </form>
   );
 };

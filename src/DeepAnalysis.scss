@@ -13,11 +13,27 @@
 
 .TextArea {
   @include analysisContainer;
+  padding: 0.5rem 1rem;
   grid-column: 1 / span 3;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
   font-size: 1.5rem;
+
+  &-info {
+    border: 3px solid var(--main-blue);
+    font-family: var(--font);
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--main-blue);
+    transition: border 1s;
+
+    &-icon {
+      margin-right: 1rem;
+    }
+  }
 
   textarea {
     width: 80%;
