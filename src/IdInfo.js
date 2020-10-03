@@ -72,6 +72,7 @@ const IdInfo = ({
       <label htmlFor="citizenship">
         Državljanstvo
         <input
+          required
           type="text"
           id="citizenship"
           value={citizenship}

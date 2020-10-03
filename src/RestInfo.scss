@@ -10,16 +10,24 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
+  }
 
-    p {
-      font-size: 0.7rem;
-    }
+  &-transaction {
+    grid-column: 1 / span 2;
+  }
 
-    label {
-      font-size: 0.8rem;
-    }
+  &-subtitle {
+    @include subHead;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   &-subtitle {

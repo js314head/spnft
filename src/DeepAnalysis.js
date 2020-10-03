@@ -3,7 +3,6 @@ import './DeepAnalysis.scss';
 import BasicInfo from './BasicInfo';
 import IdInfo from './IdInfo';
 import RestInfo from './RestInfo';
-import TextArea from './TextArea';
 import fire from './fire';
 
 const DeepAnalysis = () => {
@@ -15,7 +14,6 @@ const DeepAnalysis = () => {
   const [idNumber, setIdNumber] = useState('');
   const [idCountry, setIdCountry] = useState('');
   const [citizenship, setCitizenship] = useState('');
-  const [source, setSource] = useState('');
   const [transaction, setTransaction] = useState('');
   const [politics, setPolitics] = useState('');
   const [suspicious, setSuspicious] = useState('');
@@ -32,7 +30,6 @@ const DeepAnalysis = () => {
     setIdNumber('');
     setIdCountry('');
     setCitizenship('');
-    setSource('');
     setTransaction('');
     setPolitics('');
     setSuspicious('');
@@ -48,7 +45,6 @@ const DeepAnalysis = () => {
       'Broj dokumenta': idNumber,
       'Država izdavatelja dokumenta': idCountry,
       Državljanstvo: citizenship,
-      'Izvor informacija': source,
       'Vrsta transackije': transaction,
       'Politički izložena stranka': politics,
       'Sumnjiva stranka': suspicious,
@@ -57,7 +53,7 @@ const DeepAnalysis = () => {
   };
 
   return (
-    <form className="DeepAnalysis">
+    <form className="DeepAnalysis" onSubmit={createCustomer}>
       <BasicInfo
         name={name}
         setName={setName}
@@ -79,8 +75,6 @@ const DeepAnalysis = () => {
         setCitizenship={setCitizenship}
       />
       <RestInfo
-        source={source}
-        setSource={setSource}
         transaction={transaction}
         setTransaction={setTransaction}
         politics={politics}
@@ -88,11 +82,16 @@ const DeepAnalysis = () => {
         suspicious={suspicious}
         setSuspicious={setSuspicious}
       />
-      <TextArea
-        remark={remark}
-        setRemark={setRemark}
-        createCustomer={createCustomer}
-      />
+      <div className="TextArea">
+        <textarea
+          placeholder="Napomena"
+          value={remark}
+          onChange={(e) => setRemark(e.target.value)}
+        />
+        <button type="submit" className="TextArea-btn">
+          Kreiraj stranku
+        </button>
+      </div>
     </form>
   );
 };
