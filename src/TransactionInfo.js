@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './TransactionInfo.scss';
 
-class TransactionInfo extends Component {
-  render() {
-    return <div className="TransactionInfo">kk</div>;
-  }
-}
+const TransactionInfo = ({ user }) => {
+  return <div className="TransactionInfo">efggf</div>;
+};
 
 export default TransactionInfo;
 

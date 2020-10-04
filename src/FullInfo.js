@@ -1,7 +1,7 @@
 import React from 'react';
 import './FullInfo.scss';
 
-const FullInfo = ({ user }) => {
+const FullInfo = ({ user, backToList }) => {
   return (
     <div className="FullInfo">
       <h1>DUBINSKA ANALIZA STRANKE</h1>
@@ -55,13 +55,11 @@ const FullInfo = ({ user }) => {
           <td>{user.Napomena}</td>
         </tr>
       </table>
+      <button className="FullInfo-btn" onClick={backToList}>
+        Vrati se
+      </button>
     </div>
   );
 };
 
 export default FullInfo;
-
-// 'Broj transakcija': 0,
-// Uplate: 0,
-// Isplate: 0,
-// 'Datum transakcije': '',

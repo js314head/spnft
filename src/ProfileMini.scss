@@ -10,6 +10,7 @@
     font-family: var(--font);
     font-size: 0.8rem;
     list-style: none;
+    animation: fade 1.5s;
 
     .bold {
       font-weight: 600;
@@ -37,5 +38,14 @@
     &:hover {
       @include buttonHover();
     }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

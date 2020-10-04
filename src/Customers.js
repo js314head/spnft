@@ -4,6 +4,7 @@ import Legend from './Legend';
 import Spinner from './Spinner';
 import ProfileMini from './ProfileMini';
 import CustomerDetail from './CustomerDetail';
+import TransactionDetail from './TransactionDetail';
 import fire from './fire';
 import './Customers.scss';
 
@@ -37,18 +38,35 @@ class Customers extends Component {
     console.log(err);
   };
 
-  openDetailUser = (oib) => {
+  openDetailUser = (idx) => {
     this.setState({ page: 'detail' });
-    this.setState({ chosenUser: oib });
+    this.setState({ chosenUser: idx });
+  };
+
+  openTransactionUser = (idx) => {
+    this.setState({ page: 'transaction' });
+    this.setState({ chosenUser: idx });
+  };
+
+  backToList = () => {
+    this.setState({ page: 'normal' });
   };
 
   renderData = () => {
     if (this.state.page === 'detail') {
       return (
-        <CustomerDetail user={this.state.userDetail[this.state.chosenUser]} />
+        <CustomerDetail
+          user={this.state.userDetail[this.state.chosenUser]}
+          backToList={this.backToList}
+        />
       );
     } else if (this.state.page === 'transaction') {
-      return 2;
+      return (
+        <TransactionDetail
+          user={this.state.userDetail[this.state.chosenUser]}
+          backToList={this.backToList}
+        />
+      );
     } else {
       let returned = [];
       for (let i = 0; i < this.state.userDetail.length; i++) {
@@ -59,6 +77,7 @@ class Customers extends Component {
             key={this.state.userDetail[i].Ime}
             index={i}
             openDetailUser={this.openDetailUser}
+            openTransactionUser={this.openTransactionUser}
           />
         );
       }

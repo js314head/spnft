@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FullInfo from './FullInfo';
 import TransactionInfo from './TransactionInfo';
 import './CustomerDetail.scss';
 
-const CustomerDetail = ({ user }) => {
+const CustomerDetail = ({ user, backToList }) => {
   return (
     <div className="CustomerDetail">
-      <FullInfo user={user} />
+      <FullInfo user={user} backToList={backToList} />
       <TransactionInfo />
     </div>
   );
