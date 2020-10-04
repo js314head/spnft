@@ -33,11 +33,12 @@
     }
   }
 
-  &-btn {
+  .Login-btn {
     @include button(2px);
     font-size: var(--default-font-size);
     margin-top: 10px;
     padding: 0.2rem 0rem;
+    width: 100%;
 
     &:hover {
       @include buttonHover();
@@ -49,14 +50,18 @@
     }
   }
 
-  &-newUser {
+  p {
     text-align: center;
-    font-size: 0.8rem;
-    line-height: 1.4;
+  }
+
+  span {
+    color: #c22f88;
+    cursor: pointer;
+    margin-left: 0.5rem;
   }
 }
 
 .errorMessage {
-  font-size: 1.3rem;
-  color: red;
+  font-size: 0.8rem;
+  color: #c22f88;
 }
