@@ -3,15 +3,13 @@ import FullInfo from './FullInfo';
 import TransactionInfo from './TransactionInfo';
 import './CustomerDetail.scss';
 
-class CustomerDetail extends Component {
-  render() {
-    return (
-      <div className="CustomerDetail">
-        <FullInfo />
-        <TransactionInfo />
-      </div>
-    );
-  }
-}
+const CustomerDetail = ({ user }) => {
+  return (
+    <div className="CustomerDetail">
+      <FullInfo user={user} />
+      <TransactionInfo />
+    </div>
+  );
+};
 
 export default CustomerDetail;

@@ -8,3 +8,8 @@ class TransactionInfo extends Component {
 }
 
 export default TransactionInfo;
+
+// 'Broj transakcija': 0,
+// Uplate: 0,
+// Isplate: 0,
+// 'Datum transakcije': '',
