@@ -23,7 +23,7 @@ const IdInfo = ({
             id="osobna"
             name="id"
             value={id}
-            onChange={(e) => setId(e.target.checked ? 'osobna' : null)}
+            onChange={(e) => setId(e.target.checked ? 'Osobna' : null)}
           />
         </label>
         <label htmlFor="putovnica">
@@ -34,7 +34,7 @@ const IdInfo = ({
             id="putovnica"
             name="id"
             value={id}
-            onChange={(e) => setId(e.target.checked ? 'putovnica' : null)}
+            onChange={(e) => setId(e.target.checked ? 'Putovnica' : null)}
           />
         </label>
         <label htmlFor="vozačka">
@@ -45,7 +45,7 @@ const IdInfo = ({
             id="vozačka"
             name="id"
             value={id}
-            onChange={(e) => setId(e.target.checked ? 'vozačka' : null)}
+            onChange={(e) => setId(e.target.checked ? 'Vozačka' : null)}
           />
         </label>
       </div>

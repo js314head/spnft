@@ -1,12 +1,12 @@
 import React from 'react';
 import './ProfileMini.scss';
 
-const ProfileMini = () => {
+const ProfileMini = ({ ime, oib }) => {
   return (
     <div className="ProfileMini">
       <ul className="ProfileMini-list">
-        <li className="bold">Ivan Marić</li>
-        <li>19777349754</li>
+        <li className="bold">{ime}</li>
+        <li>{oib}</li>
         <li className="bold">32</li>
         <li>298 547,00</li>
         <li>85 501,00</li>

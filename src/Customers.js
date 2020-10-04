@@ -7,6 +7,7 @@ import CustomerDetail from './CustomerDetail';
 import fire from './fire';
 import './Customers.scss';
 import { DesktopAccessDisabledTwoTone } from '@material-ui/icons';
+import { keys } from '@material-ui/core/styles/createBreakpoints';
 
 class Customers extends Component {
   constructor(props) {
@@ -26,8 +27,7 @@ class Customers extends Component {
     let users = data.val();
     let keys = Object.keys(users);
     this.setState({ users: users, userKeys: keys });
-    console.log(this.state.users);
-    console.log(this.state.userKeys);
+    console.log(keys);
   };
 
   errData = (err) => {
@@ -35,15 +35,23 @@ class Customers extends Component {
   };
 
   renderData = () => {
-    return <Spinner />;
+    let users = this.state.users;
+    let keys = this.state.userKeys;
+    let returned = [];
+    for (let i = 0; i < keys.length; i++) {
+      returned.push(
+        <ProfileMini ime={users[keys[i]].Ime} oib={users[keys[i]].OIB} />
+      );
+    }
+    return returned;
   };
 
   render() {
     return (
       <div className="Customers">
         <SearchAndSort />
-        {/* <Legend /> */}
-        {this.renderData()}
+        <Legend />
+        {!this.state.users ? <Spinner /> : this.renderData()}
         <div className="Render-box" data-simplebar></div>
       </div>
     );

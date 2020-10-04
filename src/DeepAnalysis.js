@@ -53,6 +53,10 @@ const DeepAnalysis = () => {
       'Politički izložena stranka': politics,
       'Sumnjiva stranka': suspicious,
       Napomena: remark,
+      'Broj transakcija': 0,
+      Uplate: 0,
+      Isplate: 0,
+      'Datum transakcije': '',
     });
 
     setTimeout(() => {
