@@ -7,10 +7,10 @@ const Legend = () => {
       <ul className="Legend-list">
         <li>Ime i prezime</li>
         <li>OIB</li>
-        <li>Broj transakcija</li>
-        <li>Ukupne uplate (kn)</li>
-        <li>Ukupne isplate (kn)</li>
-        <li>Posljednja transakcija</li>
+        <li className="invisible">Broj transakcija</li>
+        <li className="invisible">Ukupne uplate (kn)</li>
+        <li className="invisible">Ukupne isplate (kn)</li>
+        <li className="invisible">Posljednja transakcija</li>
         <button className="unvisible">Upiši transakciju</button>
         <button className="unvisible">Detalji stranke</button>
       </ul>

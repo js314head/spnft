@@ -41,3 +41,54 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .CreateCustomer {
+    width: 100%;
+    padding: 0.5rem;
+
+    &-headline {
+      font-size: 1.3rem;
+    }
+
+    &-head {
+      padding: 0.2rem;
+      font-size: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 800px) {
+  .CreateCustomer {
+    width: 100%;
+    padding: 0.5rem;
+
+    &-headline {
+      font-size: 1.3rem;
+    }
+
+    &-head {
+      padding: 0.2rem;
+      font-size: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .CreateCustomer {
+    width: 100%;
+    padding: 0.5rem;
+
+    &-headline {
+      font-size: 1.3rem;
+    }
+
+    &-head {
+      padding: 0.2rem;
+      font-size: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+}

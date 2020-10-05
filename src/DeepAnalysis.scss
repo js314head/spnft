@@ -67,3 +67,42 @@
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .DeepAnalysis {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .TextArea {
+    textarea {
+      height: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 800px) {
+  .DeepAnalysis {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .TextArea {
+    textarea {
+      height: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .DeepAnalysis {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .TextArea {
+    textarea {
+      height: 60px;
+    }
+  }
+}

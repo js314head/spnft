@@ -13,10 +13,10 @@ const ProfileMini = ({
       <ul className="ProfileMini-list">
         <li className="bold name">{ime}</li>
         <li>{oib}</li>
-        <li className="bold">32</li>
-        <li>298 547,00</li>
-        <li>85 501,00</li>
-        <li>18.9.2020</li>
+        <li className="bold hide">32</li>
+        <li className="hide">298 547,00</li>
+        <li className="hide">85 501,00</li>
+        <li className="hide">18.9.2020</li>
         <button
           className="ProfileMini-btn"
           onClick={() => openTransactionUser(index)}

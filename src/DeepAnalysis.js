@@ -65,7 +65,7 @@ const DeepAnalysis = () => {
   };
 
   return (
-    <form className="DeepAnalysis" onSubmit={createCustomer}>
+    <form className="DeepAnalysis" onSubmit={createCustomer} data-simplebar>
       <BasicInfo
         name={name}
         setName={setName}
