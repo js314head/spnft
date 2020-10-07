@@ -19,7 +19,9 @@
 
   &-btn {
     @include button(2px);
-    width: 50%;
+    width: 130px;
+    height: 30px;
+    font-size: 1rem;
     align-self: center;
 
     &:hover {

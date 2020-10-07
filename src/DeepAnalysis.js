@@ -53,10 +53,7 @@ const DeepAnalysis = () => {
       'Politički izložena stranka': politics,
       'Sumnjiva stranka': suspicious,
       Napomena: remark,
-      'Broj transakcija': 0,
-      Uplate: 0,
-      Isplate: 0,
-      'Datum transakcije': '',
+      Transakcije: [],
     });
 
     setTimeout(() => {
@@ -65,7 +62,7 @@ const DeepAnalysis = () => {
   };
 
   return (
-    <form className="DeepAnalysis" onSubmit={createCustomer} data-simplebar>
+    <form className="DeepAnalysis" onSubmit={createCustomer}>
       <BasicInfo
         name={name}
         setName={setName}

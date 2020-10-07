@@ -3,7 +3,8 @@ import FullInfo from './FullInfo';
 import TransactionInfo from './TransactionInfo';
 import './CustomerDetail.scss';
 
-const CustomerDetail = ({ user, backToList }) => {
+const CustomerDetail = ({ user, backToList, getUserId }) => {
+  console.log(getUserId());
   return (
     <div className="CustomerDetail">
       <FullInfo user={user} backToList={backToList} />

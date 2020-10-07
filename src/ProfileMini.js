@@ -7,6 +7,7 @@ const ProfileMini = ({
   index,
   openDetailUser,
   openTransactionUser,
+  getUserId,
 }) => {
   return (
     <div className="ProfileMini">
