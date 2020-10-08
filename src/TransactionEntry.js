@@ -31,112 +31,99 @@ class TransactionEntry extends Component {
   render() {
     return (
       <div className="TransactionEntry">
-        <h1 className="TransactionEntry-headline">UNOS TRANSAKCIJE</h1>
         <form className="TransactionEntry-form">
-          <div className="TransactionEntry-checkbox">
-            <div className="TransactionEntry-sort">
-              <p>Vrsta transakcije</p>
-              <div className="flex">
-                <label htmlFor="payment">
-                  Uplata
-                  <input
-                    required
-                    type="radio"
-                    id="payment"
-                    name="sortT"
-                    value={this.state.sort}
-                    onChange={(e) => this.setState({ sort: 'Uplata' })}
-                  />
-                </label>
-                <label htmlFor="payout">
-                  Isplata
-                  <input
-                    required
-                    type="radio"
-                    id="payout"
-                    name="sortT"
-                    value={this.state.sort}
-                    onChange={(e) => this.setState({ sort: 'Isplata' })}
-                  />
-                </label>
-              </div>
-            </div>
+          <label>
+            Iznos transakcije
+            <input
+              autoFocus
+              required
+              type="number"
+              value={this.state.iznos}
+              onChange={(e) => this.setState({ iznos: e.target.value })}
+            ></input>
+          </label>
+          <label htmlFor="dateOfTransaction">
+            Datum transakcije
+            <input
+              required
+              type="date"
+              id="dateOfTransaction"
+              value={this.state.date}
+              onChange={(e) => this.setState({ date: e.target.value })}
+            />
+          </label>
 
-            <div className="TransactionEntry-location">
-              <p>Lokacija transakcije</p>
-              <div className="flex">
-                <label htmlFor="casino">
-                  Casino
-                  <input
-                    required
-                    type="radio"
-                    id="casino"
-                    name="sortL"
-                    value={this.state.location}
-                    onChange={(e) => this.setState({ location: 'Casino' })}
-                  />
-                </label>
-                <label htmlFor="exchange">
-                  Mjenjačnica
-                  <input
-                    required
-                    type="radio"
-                    id="exchange"
-                    name="sortL"
-                    value={this.state.location}
-                    onChange={(e) => this.setState({ location: 'Mjenjačnica' })}
-                  />
-                </label>
-                <label htmlFor="POS">
-                  POS
-                  <input
-                    required
-                    type="radio"
-                    id="POS"
-                    name="sortL"
-                    value={this.state.location}
-                    onChange={(e) => this.setState({ location: 'POS' })}
-                  />
-                </label>
-              </div>
+          <div className="TransactionEntry-flex">
+            <p>Vrsta transakcije</p>
+            <div className="TransactionEntry-checkbox">
+              <label htmlFor="payment">
+                Uplata
+                <input
+                  required
+                  type="radio"
+                  id="payment"
+                  name="sortT"
+                  value={this.state.sort}
+                  onChange={(e) => this.setState({ sort: 'Uplata' })}
+                />
+              </label>
+              <label htmlFor="payout">
+                Isplata
+                <input
+                  required
+                  type="radio"
+                  id="payout"
+                  name="sortT"
+                  value={this.state.sort}
+                  onChange={(e) => this.setState({ sort: 'Isplata' })}
+                />
+              </label>
             </div>
           </div>
 
-          <div className="TransactionEntry-rest">
-            <label>
-              Iznos transakcije
-              <input
-                required
-                type="text"
-                value={this.state.iznos}
-                onChange={(e) => this.setState({ iznos: e.target.value })}
-              ></input>
-            </label>
-            <label htmlFor="dateOfTransaction">
-              Datum transakcije
-              <input
-                required
-                type="date"
-                id="dateOfTransaction"
-                value={this.state.date}
-                onChange={(e) => this.setState({ date: e.target.value })}
-              />
-            </label>
-
-            <button
-              className="TransactionEntry-btn entry"
-              onClick={this.sendData}
-            >
-              Upiši transakciju!
-            </button>
+          <div className="TransactionEntry-flex">
+            <p>Lokacija transakcije</p>
+            <div className="TransactionEntry-checkbox">
+              <label htmlFor="casino">
+                Casino
+                <input
+                  required
+                  type="radio"
+                  id="casino"
+                  name="sortL"
+                  value={this.state.location}
+                  onChange={(e) => this.setState({ location: 'Casino' })}
+                />
+              </label>
+              <label htmlFor="exchange">
+                Mjenjačnica
+                <input
+                  required
+                  type="radio"
+                  id="exchange"
+                  name="sortL"
+                  value={this.state.location}
+                  onChange={(e) => this.setState({ location: 'Mjenjačnica' })}
+                />
+              </label>
+              <label htmlFor="POS">
+                POS
+                <input
+                  required
+                  type="radio"
+                  id="POS"
+                  name="sortL"
+                  value={this.state.location}
+                  onChange={(e) => this.setState({ location: 'POS' })}
+                />
+              </label>
+            </div>
           </div>
+
+          <button className="TransactionEntry-btn" onClick={this.sendData}>
+            Upiši transakciju!
+          </button>
         </form>
-        <button
-          className="TransactionEntry-btn"
-          onClick={this.props.backToList}
-        >
-          Vrati se
-        </button>
       </div>
     );
   }

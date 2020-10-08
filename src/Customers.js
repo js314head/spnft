@@ -17,6 +17,7 @@ class Customers extends Component {
     this.state = { chosenUser: 0 };
     this.state = { page: 'normal' };
     this.state = { index: 0 };
+    this.state = { displayLegend: true };
   }
 
   componentDidMount() {
@@ -46,12 +47,12 @@ class Customers extends Component {
   };
 
   openDetailUser = (idx) => {
-    this.setState({ page: 'detail' });
+    this.setState({ page: 'detail', displayLegend: false });
     this.setState({ chosenUser: idx });
   };
 
   openTransactionUser = (idx) => {
-    this.setState({ page: 'transaction' });
+    this.setState({ page: 'transaction', displayLegend: false });
     this.setState({ chosenUser: idx });
   };
 
@@ -91,15 +92,15 @@ class Customers extends Component {
           />
         );
       }
+
       return returned;
     }
   };
-
   render() {
     return (
       <div className="Customers">
         <SearchAndSort />
-        <Legend />
+        {this.state.displayLegend ? <Legend /> : null}
 
         {!this.state.users ? <Spinner /> : this.renderData()}
       </div>

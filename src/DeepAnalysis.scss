@@ -43,7 +43,7 @@
 
     &:focus,
     &:active {
-      outline: none;
+      outline: 1px solid var(--main-blue);
     }
   }
 

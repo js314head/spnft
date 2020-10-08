@@ -19,7 +19,6 @@ class TransactionDetail extends Component {
   gotData = (data) => {
     const user = data.val();
     let transakcije = user.Transakcije;
-    console.log(user.Transakcije);
     if (transakcije === undefined) {
       transakcije = [];
     }

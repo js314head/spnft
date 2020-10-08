@@ -1,10 +1,12 @@
 @import './mixins';
 
 .TransactionInfo {
-  @include analysisContainer;
-  flex: 1;
-  margin: 0.5rem 0 0 0.5rem;
+  @include radioStyle;
   animation: fade 1.5s;
+  border: var(--default-border);
+  font-family: var(--font);
+  padding: 0.2rem 0rem;
+  height: 78%;
 }
 
 @keyframes fade {

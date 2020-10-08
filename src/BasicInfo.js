@@ -17,6 +17,7 @@ const BasicInfo = ({
       <label htmlFor="name">
         Ime i prezime
         <input
+          autoFocus
           required
           type="text"
           id="name"
