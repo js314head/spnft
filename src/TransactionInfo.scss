@@ -5,8 +5,37 @@
   animation: fade 1.5s;
   border: var(--default-border);
   font-family: var(--font);
-  padding: 0.2rem 0rem;
+  padding: 0.2rem 2rem;
   height: 78%;
+  display: flex;
+  justify-content: flex-start;
+  overflow: auto;
+
+  &-uplate,
+  &-isplate {
+    width: 48%;
+    padding: 1rem 2rem;
+  }
+
+  &-headline {
+    color: var(--main-blue);
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  &-Legend {
+    color: var(--main-blue);
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      margin-bottom: 0.3rem;
+      flex: 1;
+      align-self: center;
+    }
+  }
 }
 
 @keyframes fade {
@@ -16,4 +45,8 @@
   to {
     opacity: 1;
   }
+}
+
+.simplebar-scrollbar:before {
+  background-color: var(--scrollbar-color);
 }

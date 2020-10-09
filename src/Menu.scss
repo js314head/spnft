@@ -30,6 +30,8 @@
     font-size: 0.9rem;
     text-decoration: none;
     color: var(--dark-grey);
+    display: flex;
+    flex-direction: column;
     text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
@@ -39,11 +41,16 @@
 
   &-user {
     color: var(--dark-grey);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    align-self: center;
+    display: flex;
+    align-items: center;
   }
 
   &-logout {
     align-self: center;
+    display: flex;
+    flex-direction: column;
 
     .svg {
       margin-right: 2px;

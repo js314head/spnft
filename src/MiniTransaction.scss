@@ -1,0 +1,13 @@
+.MiniTransaction {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--main-blue);
+  font-size: 0.8rem;
+
+  p {
+    margin-bottom: 0.3rem;
+    flex: 1;
+    align-self: center;
+  }
+}

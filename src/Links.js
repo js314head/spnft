@@ -5,7 +5,7 @@ const Law = () => {
   return (
     <div className="Links">
       <h1 className="Links-headline">Linkovi</h1>
-      <hr class="Links-line"></hr>
+      <hr className="Links-line"></hr>
       <div className="Links-head">
         <h1>
           Linkovi na stranice povezane sa sprječavanjem pranja novca i
