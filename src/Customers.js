@@ -99,8 +99,8 @@ class Customers extends Component {
   render() {
     return (
       <div className="Customers">
-        <SearchAndSort />
-        {this.state.displayLegend ? <Legend /> : null}
+        <SearchAndSort className='Customers-ss'/>
+        {this.state.displayLegend ? <Legend className='Customers-l'/> : null}
 
         {!this.state.users ? <Spinner /> : this.renderData()}
       </div>

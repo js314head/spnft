@@ -1,5 +1,4 @@
 @import './mixins';
-@import './mixins';
 
 .Menu {
   @include flexContainer(column, space-between, strecth);
@@ -17,6 +16,11 @@
 
   &-nav {
     padding: 0;
+
+    li:hover {
+      background-color: var(--main-blue);
+      color: white;
+    }
   }
 
   &-navLink {
@@ -29,6 +33,8 @@
     text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
+    transition: 0.8s;
+    padding: 0.4rem;
   }
 
   &-user {
@@ -55,6 +61,10 @@
       }
     }
   }
+}
+.active {
+  background-color: var(--main-blue);
+  color: white;
 }
 
 @media screen and (max-width: 640px) {

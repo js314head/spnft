@@ -5,16 +5,17 @@
   padding: 1.5rem;
   font-family: var(--font);
   line-height: 1.1;
-  animation: slider 0.5s;
 
   &-headline {
     color: var(--dark-grey);
     font-size: 1.8rem;
     margin-bottom: 0;
+    animation: sliderx 0.5s;
   }
 
   &-line {
     border: 1px solid var(--dark-grey);
+    animation: sliderx 0.5s;
   }
 
   &-head {
@@ -22,6 +23,7 @@
     font-size: 0.5rem;
     background-color: var(--grey);
     text-align: center;
+    animation: sliderx 0.5s;
 
     h1 {
       margin: 0.5rem 0;
@@ -31,6 +33,7 @@
   &-list {
     list-style: none;
     padding-left: 0;
+    animation: sliderica 0.5s;
 
     li {
       width: 90%;
@@ -52,13 +55,13 @@
   }
 }
 
-@keyframes slider {
+@keyframes sliderx {
   from {
-    transform: translateY(2000px);
+    transform: translateX(2000px);
     opacity: 0;
   }
   to {
-    transform: translateY(0px);
+    transform: translateX(0px);
     opacity: 1;
   }
 }
@@ -135,5 +138,14 @@
         padding: 0.2rem 0.5rem;
       }
     }
+  }
+}
+
+@keyframes sliderica {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

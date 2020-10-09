@@ -4,7 +4,6 @@
   padding: 1.5rem;
   background-color: var(--light-blue);
   overflow: hidden;
-  animation: slider 0.5s;
 }
 
 .Render-box {
@@ -14,15 +13,4 @@
 
 .simplebar-scrollbar:before {
   background-color: var(--scrollbar-color);
-}
-
-@keyframes slider {
-  from {
-    transform: translateY(-2000px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
 }

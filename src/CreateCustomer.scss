@@ -6,16 +6,17 @@
   overflow: hidden;
   font-family: var(--font);
   line-height: 1.1;
-  animation: slider 0.5s;
 
   &-headline {
     font-size: 1.8rem;
     margin-bottom: 0;
     color: var(--dark-grey);
+    animation: sliderx 0.5s;
   }
 
   &-line {
     border: 1px solid var(--dark-grey);
+    animation: sliderx 0.5s;
   }
 
   &-head {
@@ -24,6 +25,7 @@
     font-family: var(--font);
     font-size: 0.65rem;
     text-align: center;
+    animation: sliderx 0.5s;
 
     h1 {
       margin: 0.2rem 0;
@@ -82,13 +84,13 @@
   }
 }
 
-@keyframes slider {
+@keyframes sliderx {
   from {
-    transform: translateY(2000px);
+    transform: translateX(2000px);
     opacity: 0;
   }
   to {
-    transform: translateY(0px);
+    transform: translateX(0px);
     opacity: 1;
   }
 }

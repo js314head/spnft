@@ -9,6 +9,7 @@
   height: 100%;
   margin-top: 0.5rem;
   font-family: var(--font);
+  animation: sliderica 0.5s;
 }
 
 .TextArea {
@@ -104,5 +105,14 @@
     textarea {
       height: 60px;
     }
+  }
+}
+
+@keyframes sliderica {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -1,4 +1,5 @@
 .Legend {
+  animation: sliderx 0.5s;
   &-list {
     display: flex;
     margin-right: 1rem;
@@ -71,5 +72,16 @@
     .hide {
       display: none;
     }
+  }
+}
+
+@keyframes sliderx {
+  from {
+    transform: translateX(2000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }

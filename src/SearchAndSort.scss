@@ -1,7 +1,8 @@
 .SearchAndSort {
   font-family: var(--font);
   line-height: 1;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
+  animation: sliderx 0.5s;
 
   &-headline {
     font-size: 1.8rem;
@@ -54,4 +55,15 @@
 
 .svg {
   align-self: start;
+}
+
+@keyframes sliderx {
+  from {
+    transform: translateX(2000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }

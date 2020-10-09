@@ -1,5 +1,6 @@
+import { ThreeSixtySharp } from '@material-ui/icons';
 import React, { Component } from 'react';
-import fire from './fire';
+import MiniTransaction from './MiniTransaction';
 import './TransactionInfo.scss';
 
 class TransactionInfo extends Component {
@@ -9,15 +10,17 @@ class TransactionInfo extends Component {
   }
 
   // componentDidUpdate() {
-  //   let transakcije = [];
-  //   Object.keys(this.props.transactions).map((key) => {
-  //     transakcije.push(this.props.transactions[key]);
+  //   let returned = []
+  //   this.props.transactions.forEach((element) => {
+  //     returned.push(<MiniTransaction />);
   //   });
-  //   this.setState({ transakcije: transakcije });
+  //   this.setState({transakcije : returned})
   // }
 
+  
+
   render() {
-    return <div className="TransactionInfo"></div>;
+    return <div className="TransactionInfo">{this.state.transakcije}</div>;
   }
 }
 
