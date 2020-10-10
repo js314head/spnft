@@ -20,4 +20,13 @@
       font-size: 0.8rem;
     }
   }
+
+  input[type='radio'] {
+    outline: 1px solid var(--main-blue);
+  }
+
+  input:active,
+  input:focus {
+    outline: 1px solid var(--main-blue);
+  }
 }

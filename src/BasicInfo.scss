@@ -8,4 +8,9 @@
   &-subtitle {
     @include subHead;
   }
+
+  input:active,
+  input:focus {
+    outline: 1px solid var(--main-blue);
+  }
 }

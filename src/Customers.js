@@ -18,6 +18,7 @@ class Customers extends Component {
     this.state = { page: 'normal' };
     this.state = { index: 0 };
     this.state = { displayLegend: true };
+    this.state = { transakcije: '' };
   }
 
   componentDidMount() {
@@ -36,6 +37,7 @@ class Customers extends Component {
       }
       this.setState({ users: users, userKeys: keys, userDetail: userDetail });
     }
+    console.log(this.state);
   };
 
   getUserId = () => {
@@ -85,6 +87,7 @@ class Customers extends Component {
             ime={this.state.userDetail[i].Ime}
             oib={this.state.userDetail[i].OIB}
             key={this.state.userDetail[i].Ime}
+            transactions={this.state.userDetail[i].Transakcije}
             index={i}
             openDetailUser={this.openDetailUser}
             openTransactionUser={this.openTransactionUser}

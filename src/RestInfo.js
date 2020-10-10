@@ -13,7 +13,7 @@ const RestInfo = ({
     <div className="RestInfo">
       <div className="RestInfo-container">
         <div className="RestInfo-transaction">
-          <p className="RestInfo-subtitle">Transakcija izvršena u</p>
+          <p>Transakcija izvršena u</p>
           <div className="options">
             <label htmlFor="TransactionCasino">
               Casino
