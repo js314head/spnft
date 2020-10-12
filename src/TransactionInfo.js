@@ -15,6 +15,7 @@ class TransactionInfo extends Component {
     setTimeout(() => {
       this.setState({transactions : this.props.transactions})
     }, 500)
+
   }
 
   renderUplate() {
@@ -29,6 +30,7 @@ class TransactionInfo extends Component {
       />
       ) : null
     )
+    
     return uplate
   }
 
@@ -44,6 +46,7 @@ class TransactionInfo extends Component {
       />
       ) : null
     )
+
     return isplate
   }
   

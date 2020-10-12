@@ -16,7 +16,7 @@ const FullInfo = ({ user, backToList }) => {
         </tr>
         <tr>
           <td>Datum rođenja</td>
-          <td>{user['Datum rođenja']}</td>
+          <td>{user['DatumRođenja']}</td>
         </tr>
         <tr>
           <td>OIB</td>
@@ -24,15 +24,15 @@ const FullInfo = ({ user, backToList }) => {
         </tr>
         <tr>
           <td>Vrsta dokumenta</td>
-          <td>{user['Vrsta dokumenta']}</td>
+          <td>{user['VrstaDokumenta']}</td>
         </tr>
         <tr>
           <td>Broj dokumenta</td>
-          <td>{user['Broj dokumenta']}</td>
+          <td>{user['BrojDokumenta']}</td>
         </tr>
         <tr>
           <td>Država izdavatelja dokumenta</td>
-          <td>{user['Država izdavatelja dokumenta']}</td>
+          <td>{user['DržavaIzdavateljaDokumenta']}</td>
         </tr>
         <tr>
           <td>Državljanstvo</td>
@@ -40,15 +40,15 @@ const FullInfo = ({ user, backToList }) => {
         </tr>
         <tr>
           <td>Vrsta transackije</td>
-          <td>{user['Vrsta transackije']}</td>
+          <td>{user['VrstaTransackije']}</td>
         </tr>
         <tr>
           <td>Politički izložena stranka</td>
-          <td>{user['Politički izložena stranka']}</td>
+          <td>{user['PolitičkiIzloženaStranka']}</td>
         </tr>
         <tr>
           <td>Sumnjiva stranka</td>
-          <td>{user['Sumnjiva stranka']}</td>
+          <td>{user['SumnjivaStranka']}</td>
         </tr>
         <tr>
           <td>Napomena</td>

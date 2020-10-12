@@ -11,14 +11,16 @@ import './Customers.scss';
 class Customers extends Component {
   constructor(props) {
     super(props);
+    this.state = { displayLegend: true };
     this.state = { users: '' };
     this.state = { userKeys: [] };
     this.state = { userDetail: [] };
     this.state = { chosenUser: 0 };
     this.state = { page: 'normal' };
     this.state = { index: 0 };
-    this.state = { displayLegend: true };
     this.state = { transakcije: '' };
+    this.state = { brojStr: 0 };
+    this.state = { brojTra : 0 };
   }
 
   componentDidMount() {
@@ -32,12 +34,16 @@ class Customers extends Component {
     if (users !== null) {
       let keys = Object.keys(users);
       let userDetail = [];
+      let numOfUsers = 0;
+      let numOfTransactions = 0;
       for (let i = 0; i < keys.length; i++) {
         userDetail.push(users[keys[i]]);
+        numOfUsers += 1
+        numOfTransactions += userDetail[i].BrojTransakcija;
       }
-      this.setState({ users: users, userKeys: keys, userDetail: userDetail });
+      this.setState({ users: users, userKeys: keys, userDetail: userDetail, displayLegend: true, brojStr : numOfUsers, brojTra : numOfTransactions });
     }
-    console.log(this.state);
+    
   };
 
   getUserId = () => {
@@ -47,6 +53,7 @@ class Customers extends Component {
   errData = (err) => {
     console.log(err);
   };
+
 
   openDetailUser = (idx) => {
     this.setState({ page: 'detail', displayLegend: false });
@@ -87,22 +94,27 @@ class Customers extends Component {
             ime={this.state.userDetail[i].Ime}
             oib={this.state.userDetail[i].OIB}
             key={this.state.userDetail[i].Ime}
-            transactions={this.state.userDetail[i].Transakcije}
+            brojTransackija={this.state.userDetail[i].BrojTransakcija}
+            datumTransakcije={this.state.userDetail[i].DatumTransakcije}
+            uplate={this.state.userDetail[i].Uplate}
+            isplate={this.state.userDetail[i].Isplate}
+            transakcije={this.state.userDetail[i].Transakcije}
             index={i}
             openDetailUser={this.openDetailUser}
             openTransactionUser={this.openTransactionUser}
             getUserId={this.getUserId}
           />
         );
+       
       }
-
+      
       return returned;
     }
   };
   render() {
     return (
       <div className="Customers">
-        <SearchAndSort className='Customers-ss'/>
+        <SearchAndSort className='Customers-ss' numOfTransactions={this.state.numOfUsers} numOfTransactions={this.state.numOfTransactions}/>
         {this.state.displayLegend ? <Legend className='Customers-l'/> : null}
 
         {!this.state.users ? <Spinner /> : this.renderData()}

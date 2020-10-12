@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component} from 'react';
 import fire from './fire';
 import './TransactionEntry.scss';
 
@@ -8,7 +8,7 @@ class TransactionEntry extends Component {
     this.state = { sort: '' };
     this.state = { location: '' };
     this.state = { date: '' };
-    this.state = { iznos: '' };
+    this.state = { iznos: 0 };
   }
 
   sendData = () => {
@@ -18,14 +18,29 @@ class TransactionEntry extends Component {
       Datum: this.state.date,
       Iznos: this.state.iznos,
     };
+    let uplate = Number(this.props.user.Uplate) + Number(this.state.iznos)
+    let isplate = Number(this.props.user.Isplate) + Number(this.state.iznos)
+    let brojTransakcija = Number(this.props.user.BrojTransakcija) + 1
 
     const transakcije = this.props.transactions;
     transakcije.push(transakcija);
     let userId = this.props.getUserId();
     const baseRef = fire.database().ref('users').child(`${userId}`);
-    baseRef.update({
-      Transakcije: transakcije,
-    });
+    if(this.state.sort === 'Uplata') {
+      baseRef.update({
+        Transakcije: transakcije,
+        Uplate: uplate,
+        BrojTransakcija: brojTransakcija,
+        DatumIsplate : this.state.date
+      });
+    } else {
+      baseRef.update({
+        Transakcije: transakcije,
+        Isplate: isplate,
+        BrojTransakcija: brojTransakcija,
+        DatumTransakcije : this.state.date
+      });
+    }
   };
 
   render() {

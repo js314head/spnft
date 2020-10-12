@@ -43,17 +43,21 @@ const DeepAnalysis = () => {
     newUser.set({
       Ime: name,
       Adresa: adress,
-      'Datum rođenja': dateOfBirth,
+      DatumRođenja: dateOfBirth,
       OIB: oib,
-      'Vrsta dokumenta': id,
-      'Broj dokumenta': idNumber,
-      'Država izdavatelja dokumenta': idCountry,
+      VrstaDokumenta: id,
+      BrojDokumenta: idNumber,
+      DržavaIzdavateljaDokumenta: idCountry,
       Državljanstvo: citizenship,
-      'Vrsta transackije': transaction,
-      'Politički izložena stranka': politics,
-      'Sumnjiva stranka': suspicious,
+      VrstaTransackije: transaction,
+      PolitičkiIzloženaStranka: politics,
+      SumnjivaStranka: suspicious,
       Napomena: remark,
       Transakcije: [],
+      Uplate : 0,
+      Isplate: 0,
+      BrojTransakcija : 0,
+      DatumTransakcije : 0
     });
 
     setTimeout(() => {

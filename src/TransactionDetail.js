@@ -36,6 +36,7 @@ class TransactionDetail extends Component {
           backToList={this.props.backToList}
           getUserId={this.props.getUserId}
           transactions={this.state.transakcije}
+          user={this.props.user}
         />
         <TransactionInfo
           user={this.props.user}
