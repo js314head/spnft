@@ -1,6 +1,18 @@
 .Dropdown {
-  &-label {
-    color: red;
+  select {
+    box-sizing: border-box;
+    background-color: var(--grey);
+    border: 1px solid var(--main-blue);
+    font-family: var(--font);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.1rem;
+    width: 220px;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+      outline: 1px solid var(--main-blue);
+    }
   }
-  width: 200px;
 }

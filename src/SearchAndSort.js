@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './SearchAndSort.scss';
-import SearchIcon from '@material-ui/icons/Search';
-import SortIcon from '@material-ui/icons/Sort';
 import Dropdown from './Dropdown';
 
 const SearchAndSort = ({numOfUsers, numOfTransactions}) => {
@@ -26,10 +24,8 @@ const SearchAndSort = ({numOfUsers, numOfTransactions}) => {
              <Dropdown />
             </li>
             <li>
-              <span>
-                <SearchIcon className="svg" />
-              </span>{' '}
-              Pretraži
+             <input type='text' className='SearchAndSort-search' placeholder='Pretraži'/>
+             <i class="fas fa-search fa-lg SearchAndSort-search-icon"></i>
             </li>
           </ul>
         </div>

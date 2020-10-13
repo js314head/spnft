@@ -51,10 +51,40 @@
     border: 1px solid var(--dark-grey);
     margin: 0;
   }
-}
 
-.svg {
-  align-self: start;
+  &-search {
+    box-sizing: border-box;
+    background-color: var(--grey);
+    border: 1px solid var(--main-blue);
+    font-family: var(--font);
+    font-size: 0.8rem;
+    padding: 0.1rem;
+    width: 150px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+      outline: 1px solid var(--main-blue);
+    }
+
+    &-icon {
+      color: var(--main-blue);
+      border: 1px solid var(--main-blue);
+      padding: 0.25rem 0.3rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--main-blue);
+        color: #fff;
+      }
+    }
+    &:active ~ &-icon,
+    &:focus ~ &-icon {
+      background-color: var(--main-blue);
+      color: #fff;
+    }
+  }
 }
 
 @keyframes sliderx {
