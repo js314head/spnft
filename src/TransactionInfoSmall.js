@@ -1,9 +1,9 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component} from 'react';
 import fire from './fire';
 import MiniTransaction from './MiniTransaction';
-import './TransactionInfo.scss';
+import './TransactionInfoSmall.scss';
 
-class TransactionInfo extends Component {
+class TransactionInfoSmall extends Component {
   constructor(props) {
     super(props)
     this.state = {transactions : []}
@@ -56,10 +56,10 @@ class TransactionInfo extends Component {
 
 
   render() {
-  return <div className="TransactionInfo">
-    <div className='TransactionInfo-uplate'>
-      <p className='TransactionInfo-headline'>UPLATE</p>
-      <div className='TransactionInfo-Legend'>
+  return <div className="TransactionInfoSmall" data-simplebar data-simplebar-auto-hide="false">
+    <div className='TransactionInfoSmall-uplate'>
+      <p className='TransactionInfoSmall-headline'>UPLATE</p>
+      <div className='TransactionInfoSmall-Legend'>
       <p>DATUM</p>
       <p>IZNOS</p>
       <p>LOKACIJA</p>
@@ -67,9 +67,9 @@ class TransactionInfo extends Component {
     {this.state.transactions ? this.renderUplate() : null}
 
     </div>
-    <div className='TransactionInfo-isplate'>
-    <p className='TransactionInfo-headline'>ISPLATE</p>
-    <div className='TransactionInfo-Legend'>
+    <div className='TransactionInfoSmall-isplate'>
+    <p className='TransactionInfoSmall-headline'>ISPLATE</p>
+    <div className='TransactionInfoSmall-Legend'>
       <p>DATUM</p>
       <p>IZNOS</p>
       <p>LOKACIJA</p>
@@ -80,4 +80,4 @@ class TransactionInfo extends Component {
   </div>
 }}
 
-export default TransactionInfo;
+export default TransactionInfoSmall;

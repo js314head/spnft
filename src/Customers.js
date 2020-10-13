@@ -54,6 +54,10 @@ class Customers extends Component {
     console.log(err);
   };
 
+  setUserNum = () => {
+   
+      return this.state.numOfUsers
+  }
 
   openDetailUser = (idx) => {
     this.setState({ page: 'detail', displayLegend: false });
@@ -66,8 +70,12 @@ class Customers extends Component {
   };
 
   backToList = () => {
-    this.setState({ page: 'normal' });
+    this.setState({ page: 'normal', displayLegend : true });
   };
+
+  renderHeader = () => {
+    return <SearchAndSort numOfUsers={this.state.brojStr} numOfTransactions={this.state.brojTra}/>
+  }
 
   renderData = () => {
     if (this.state.page === 'detail') {
@@ -114,7 +122,8 @@ class Customers extends Component {
   render() {
     return (
       <div className="Customers">
-        <SearchAndSort className='Customers-ss' numOfTransactions={this.state.numOfUsers} numOfTransactions={this.state.numOfTransactions}/>
+        {!this.state.users ? null : this.renderHeader()}
+        
         {this.state.displayLegend ? <Legend className='Customers-l'/> : null}
 
         {!this.state.users ? <Spinner /> : this.renderData()}

@@ -5,7 +5,9 @@ class ProfileMini extends Component{
   
 
 
-
+  numberWithCommas(x) {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+  }
 
   render() {
    
@@ -16,9 +18,9 @@ class ProfileMini extends Component{
           <li className="bold name">{this.props.ime}</li>
           <li>{this.props.oib}</li>
     <li className="bold hide">{this.props.brojTransackija}</li>
+          <li className="hide">{this.numberWithCommas(this.props.uplate)}</li>
+          <li className="hide">{this.numberWithCommas(this.props.isplate)}</li>
           <li className="hide">{this.props.datumTransakcije}</li>
-          <li className="hide">{this.props.uplate}</li>
-          <li className="hide">{this.props.isplate}</li>
           <button
             className="ProfileMini-btn"
             onClick={() => this.props.openTransactionUser(this.props.index)}

@@ -46,10 +46,11 @@ class TransactionEntry extends Component {
   render() {
     return (
       <div className="TransactionEntry">
-        <form className="TransactionEntry-form">
+        <form className="TransactionEntry-form" onSubmit={this.sendData}>
           <label>
             Iznos transakcije
             <input
+            min="1"
               autoFocus
               required
               type="number"
@@ -135,7 +136,7 @@ class TransactionEntry extends Component {
             </div>
           </div>
 
-          <button className="TransactionEntry-btn" onClick={this.sendData}>
+          <button className="TransactionEntry-btn">
             Upiši transakciju!
           </button>
         </form>

@@ -1,15 +1,16 @@
 @import './mixins';
 
-.TransactionInfo {
+.TransactionInfoSmall {
   @include radioStyle;
   animation: fade 1.5s;
   border: var(--default-border);
   font-family: var(--font);
-  padding: 0.2rem 2rem;
-  height: 78%;
+  flex: 2;
+  margin-left: 0.5rem;
   display: flex;
   justify-content: flex-start;
   overflow: auto;
+  box-sizing: border-box;
 
   &-uplate,
   &-isplate {
@@ -20,13 +21,13 @@
   &-headline {
     color: var(--main-blue);
     text-align: center;
-    margin: 0 0 0.5rem 0;
-    font-size: 1.1rem;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
   }
 
   &-Legend {
     color: var(--main-blue);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     display: flex;
     justify-content: space-between;
 
