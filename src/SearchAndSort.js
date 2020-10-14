@@ -2,7 +2,7 @@ import React from 'react';
 import './SearchAndSort.scss';
 import Dropdown from './Dropdown';
 
-const SearchAndSort = ({numOfUsers, numOfTransactions}) => {
+const SearchAndSort = ({numOfUsers, numOfTransactions, sortiraj}) => {
 
   return (
     <div className="SearchAndSort">
@@ -21,11 +21,11 @@ const SearchAndSort = ({numOfUsers, numOfTransactions}) => {
         <div>
           <ul className="SearchAndSort-sort">
             <li>
-             <Dropdown />
+             <Dropdown sortiraj={sortiraj}/>
             </li>
             <li>
              <input type='text' className='SearchAndSort-search' placeholder='Pretraži'/>
-             <i class="fas fa-search fa-lg SearchAndSort-search-icon"></i>
+             <i className="fas fa-search fa-lg SearchAndSort-search-icon"></i>
             </li>
           </ul>
         </div>

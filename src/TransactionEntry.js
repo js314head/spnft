@@ -31,7 +31,7 @@ class TransactionEntry extends Component {
         Transakcije: transakcije,
         Uplate: uplate,
         BrojTransakcija: brojTransakcija,
-        DatumIsplate : this.state.date
+        DatumTransakcije : this.state.date
       });
     } else {
       baseRef.update({
