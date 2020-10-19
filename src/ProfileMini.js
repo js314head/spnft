@@ -23,13 +23,13 @@ class ProfileMini extends Component{
           <li className="hide">{this.props.datumTransakcije}</li>
           <button
             className="ProfileMini-btn"
-            onClick={() => this.props.openTransactionUser(this.props.index)}
+            onClick={(e) => this.props.openTransactionUser(e.target.parentNode.firstChild.innerText)}
           >
             Upiši transakciju
           </button>
           <button
             className="ProfileMini-btn"
-            onClick={() => this.props.openDetailUser(this.props.index)}
+            onClick={(e) => this.props.openDetailUser(e.target.parentNode.firstChild.innerText)}
           >
             Detalji stranke
           </button>

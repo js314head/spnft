@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import fire from './fire';
 import './TransactionEntry.scss';
 
@@ -18,27 +18,37 @@ class TransactionEntry extends Component {
       Datum: this.state.date,
       Iznos: this.state.iznos,
     };
-    let uplate = Number(this.props.user.Uplate) + Number(this.state.iznos)
-    let isplate = Number(this.props.user.Isplate) + Number(this.state.iznos)
-    let brojTransakcija = Number(this.props.user.BrojTransakcija) + 1
 
+    let keys = Object.keys(this.props.users);
+    let userId = [];
+    for (let i = 0; i < keys.length; i++) {
+      if (this.props.users[keys[i]].Ime === this.props.user) {
+        userId.push(keys[i]);
+      }
+    }
+    let uplate =
+      Number(this.props.users[userId[0]].Uplate) + Number(this.state.iznos);
+    let isplate =
+      Number(this.props.users[userId[0]].Isplate) + Number(this.state.iznos);
+    let brojTransakcija =
+      Number(this.props.users[userId[0]].BrojTransakcija) + 1;
     const transakcije = this.props.transactions;
     transakcije.push(transakcija);
-    let userId = this.props.getUserId();
-    const baseRef = fire.database().ref('users').child(`${userId}`);
-    if(this.state.sort === 'Uplata') {
+
+    const baseRef = fire.database().ref('users').child(`${userId[0]}`);
+    if (this.state.sort === 'Uplata') {
       baseRef.update({
         Transakcije: transakcije,
         Uplate: uplate,
         BrojTransakcija: brojTransakcija,
-        DatumTransakcije : this.state.date
+        DatumTransakcije: this.state.date,
       });
     } else {
       baseRef.update({
         Transakcije: transakcije,
         Isplate: isplate,
         BrojTransakcija: brojTransakcija,
-        DatumTransakcije : this.state.date
+        DatumTransakcije: this.state.date,
       });
     }
   };
@@ -50,7 +60,7 @@ class TransactionEntry extends Component {
           <label>
             Iznos transakcije
             <input
-            min="1"
+              min="1"
               autoFocus
               required
               type="number"
@@ -136,8 +146,12 @@ class TransactionEntry extends Component {
             </div>
           </div>
 
-          <button className="TransactionEntry-btn">
-            Upiši transakciju!
+          <button className="TransactionEntry-btn">Upiši transakciju!</button>
+          <button
+            className="TransactionEntry-back"
+            onClick={this.props.backToList}
+          >
+            Vrati se
           </button>
         </form>
       </div>

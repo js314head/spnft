@@ -1,58 +1,58 @@
 import React from 'react';
 import './FullInfo.scss';
 
-const FullInfo = ({ user, backToList }) => {
+const FullInfo = ({ userInfo, backToList }) => {
   return (
     <div className="FullInfo">
       <h1>DUBINSKA ANALIZA STRANKE</h1>
       <table>
         <tr>
           <td>Ime</td>
-          <td>{user.Ime}</td>
+          <td>{userInfo.Ime}</td>
         </tr>
         <tr>
           <td>Adresa</td>
-          <td>{user.Adresa}</td>
+          <td>{userInfo.Adresa}</td>
         </tr>
         <tr>
           <td>Datum rođenja</td>
-          <td>{user['DatumRođenja']}</td>
+          <td>{userInfo['DatumRođenja']}</td>
         </tr>
         <tr>
           <td>OIB</td>
-          <td>{user.OIB}</td>
+          <td>{userInfo.OIB}</td>
         </tr>
         <tr>
           <td>Vrsta dokumenta</td>
-          <td>{user['VrstaDokumenta']}</td>
+          <td>{userInfo['VrstaDokumenta']}</td>
         </tr>
         <tr>
           <td>Broj dokumenta</td>
-          <td>{user['BrojDokumenta']}</td>
+          <td>{userInfo['BrojDokumenta']}</td>
         </tr>
         <tr>
           <td>Država izdavatelja dokumenta</td>
-          <td>{user['DržavaIzdavateljaDokumenta']}</td>
+          <td>{userInfo['DržavaIzdavateljaDokumenta']}</td>
         </tr>
         <tr>
           <td>Državljanstvo</td>
-          <td>{user.Državljanstvo}</td>
+          <td>{userInfo.Državljanstvo}</td>
         </tr>
         <tr>
           <td>Vrsta transackije</td>
-          <td>{user['VrstaTransackije']}</td>
+          <td>{userInfo['VrstaTransackije']}</td>
         </tr>
         <tr>
           <td>Politički izložena stranka</td>
-          <td>{user['PolitičkiIzloženaStranka']}</td>
+          <td>{userInfo['PolitičkiIzloženaStranka']}</td>
         </tr>
         <tr>
           <td>Sumnjiva stranka</td>
-          <td>{user['SumnjivaStranka']}</td>
+          <td>{userInfo['SumnjivaStranka']}</td>
         </tr>
         <tr>
           <td>Napomena</td>
-          <td>{user.Napomena}</td>
+          <td>{userInfo.Napomena}</td>
         </tr>
       </table>
       <button className="FullInfo-btn" onClick={backToList}>
