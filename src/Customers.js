@@ -221,7 +221,7 @@ class Customers extends Component {
           );
         }
       }
-      return returned;
+      return <div className="Render-box">{returned}</div>;
     }
   };
   render() {

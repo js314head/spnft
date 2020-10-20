@@ -16,7 +16,7 @@ const SearchAndSort = ({
         <div>
           <ul className="SearchAndSort-stats">
             <li>
-              <span>{numOfUsers}</span> stranke
+              <span>{numOfUsers}</span> stranaka
             </li>
             <li>
               <span>{numOfTransactions}</span> transakcije

@@ -1,41 +1,10 @@
-@import './mixins';
-
 .TransactionInfo {
-  @include radioStyle;
-  animation: fade 1.5s;
-  border: var(--default-border);
+  animation: fade 1s;
   font-family: var(--font);
-  padding: 0.2rem 1rem;
-  height: 78%;
   display: flex;
-  justify-content: flex-start;
-  overflow: auto;
-
-  &-uplate,
-  &-isplate {
-    width: 48%;
-    padding: 0.5rem 2rem 1rem 2rem;
-  }
-
-  &-headline {
-    color: var(--main-blue);
-    text-align: center;
-    margin: 0 0 0.5rem 0;
-    font-size: 1.1rem;
-  }
-
-  &-Legend {
-    color: var(--main-blue);
-    font-size: 0.7rem;
-    display: flex;
-    justify-content: space-between;
-
-    p {
-      margin-bottom: 0.3rem;
-      flex: 1;
-      align-self: center;
-    }
-  }
+  justify-content: space-between;
+  height: 78%;
+  padding: 0.5rem 0;
 }
 
 @keyframes fade {
@@ -45,8 +14,4 @@
   to {
     opacity: 1;
   }
-}
-
-.simplebar-scrollbar:before {
-  background-color: var(--scrollbar-color);
 }

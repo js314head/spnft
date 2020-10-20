@@ -32,7 +32,10 @@ class TransactionEntry extends Component {
       Number(this.props.users[userId[0]].Isplate) + Number(this.state.iznos);
     let brojTransakcija =
       Number(this.props.users[userId[0]].BrojTransakcija) + 1;
-    const transakcije = this.props.transactions;
+    let transakcije = this.props.transactions;
+    if (transakcije === undefined) {
+      transakcije = [];
+    }
     transakcije.push(transakcija);
 
     const baseRef = fire.database().ref('users').child(`${userId[0]}`);
