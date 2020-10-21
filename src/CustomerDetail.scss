@@ -5,3 +5,17 @@
   width: 99%;
   height: 78%;
 }
+
+@media screen and (max-width: 800px) {
+  .CustomerDetail {
+    flex-direction: column;
+    overflow: auto;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .CustomerDetail {
+    flex-direction: column;
+    overflow: auto;
+  }
+}

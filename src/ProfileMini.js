@@ -11,7 +11,7 @@ class ProfileMini extends Component {
       <div className="ProfileMini">
         <ul className="ProfileMini-list">
           <li className="bold name">{this.props.ime}</li>
-          <li>{this.props.oib}</li>
+          <li className="hide">{this.props.oib}</li>
           <li className="bold hide">{this.props.brojTransackija}</li>
           <li className="hide">{this.numberWithCommas(this.props.uplate)}</li>
           <li className="hide">{this.numberWithCommas(this.props.isplate)}</li>

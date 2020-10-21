@@ -65,3 +65,21 @@
   font-size: 0.8rem;
   color: #c22f88;
 }
+
+@media screen and (max-width: 640px) {
+  .Login {
+    width: 300px;
+    height: 400px;
+    margin: 10vh auto;
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Login {
+    width: 350px;
+    height: 435px;
+    margin: 10vh auto;
+    padding: 2rem;
+  }
+}

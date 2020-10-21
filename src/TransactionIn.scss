@@ -29,3 +29,15 @@
 .simplebar-scrollbar:before {
   background-color: var(--scrollbar-color);
 }
+
+@media screen and (max-width: 800px) {
+  .TransactionIn {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .TransactionIn {
+    width: 85%;
+  }
+}

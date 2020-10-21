@@ -6,7 +6,7 @@ const Legend = () => {
     <div className="Legend">
       <ul className="Legend-list">
         <li>Ime i prezime</li>
-        <li>OIB</li>
+        <li className="invisible">OIB</li>
         <li className="invisible">Broj transakcija</li>
         <li className="invisible">Ukupne uplate (kn)</li>
         <li className="invisible">Ukupne isplate (kn)</li>

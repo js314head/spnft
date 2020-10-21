@@ -27,26 +27,12 @@
 
 @media screen and (max-width: 640px) {
   .Legend {
-    &-list {
-      li {
-        margin-right: 6rem;
-      }
-    }
-  }
-  .invisible {
     display: none;
   }
 }
 
 @media screen and (min-width: 640px) and (max-width: 800px) {
   .Legend {
-    &-list {
-      li {
-        margin-right: 8rem;
-      }
-    }
-  }
-  .invisible {
     display: none;
   }
 }
