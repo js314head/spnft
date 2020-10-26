@@ -98,6 +98,18 @@
     &-form {
       display: flex;
       flex-wrap: wrap;
+
+      input[type='number'],
+      input[type='date'] {
+        width: 40ww;
+      }
+    }
+    .import {
+      width: 60%;
+    }
+
+    .back {
+      width: 30%;
     }
   }
 

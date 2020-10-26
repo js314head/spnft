@@ -6,3 +6,15 @@
   width: 99%;
   height: 80%;
 }
+
+@media screen and (max-width: 640px) {
+  .TransactionDetail {
+    overflow: scroll;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 800px) {
+  .TransactionDetail {
+    overflow: scroll;
+  }
+}

@@ -149,9 +149,11 @@ class TransactionEntry extends Component {
             </div>
           </div>
 
-          <button className="TransactionEntry-btn">Upiši transakciju!</button>
+          <button className="TransactionEntry-btn import">
+            Upiši transakciju!
+          </button>
           <button
-            className="TransactionEntry-back"
+            className="TransactionEntry-back back"
             onClick={this.props.backToList}
           >
             Vrati se
