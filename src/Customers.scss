@@ -18,3 +18,15 @@
 .simplebar-scrollbar:before {
   background-color: var(--scrollbar-color);
 }
+
+@media screen and (max-width: 640px) {
+  .Customers {
+    padding: 0.5rem 0.2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Customers {
+    padding: 0.5rem 0.2rem;
+  }
+}
