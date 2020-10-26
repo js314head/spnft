@@ -100,8 +100,13 @@
 
     &-sort {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      width: 90%;
       padding: 0;
+    }
+
+    &-search {
+      width: 100px;
     }
 
     &-line {
@@ -135,30 +140,6 @@
 
     &-line {
       margin-bottom: 1rem;
-    }
-  }
-}
-
-@media screen and (min-width: 800px) and (max-width: 1024px) {
-  .ProfileMini {
-    &-btn {
-      width: 85px;
-      padding: 0.4rem 0rem;
-    }
-    .hide {
-      display: none;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
-  .ProfileMini {
-    &-btn {
-      width: 85px;
-      padding: 0.4rem 0rem;
-    }
-    .hide {
-      display: none;
     }
   }
 }

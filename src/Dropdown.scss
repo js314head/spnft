@@ -16,3 +16,11 @@
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .Dropdown {
+    select {
+      width: 125px;
+    }
+  }
+}

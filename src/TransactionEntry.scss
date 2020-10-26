@@ -92,3 +92,21 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .TransactionEntry {
+    &-form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 800px) {
+    .TransactionEntry {
+      &-form {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
