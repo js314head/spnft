@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/spnft/static/css/main.5012621c.chunk.css",
+    "main.css": "/spnft/static/css/main.11e0132a.chunk.css",
     "main.js": "/spnft/static/js/main.47fc2862.chunk.js",
     "main.js.map": "/spnft/static/js/main.47fc2862.chunk.js.map",
     "runtime-main.js": "/spnft/static/js/runtime-main.8b1162b8.js",
@@ -8,16 +8,16 @@
     "static/js/2.73a8a90c.chunk.js": "/spnft/static/js/2.73a8a90c.chunk.js",
     "static/js/2.73a8a90c.chunk.js.map": "/spnft/static/js/2.73a8a90c.chunk.js.map",
     "index.html": "/spnft/index.html",
-    "precache-manifest.f66e57b3efbb419429a3cbcc2dd94af1.js": "/spnft/precache-manifest.f66e57b3efbb419429a3cbcc2dd94af1.js",
+    "precache-manifest.2392190f656e7fb2e56b8a79415bd456.js": "/spnft/precache-manifest.2392190f656e7fb2e56b8a79415bd456.js",
     "service-worker.js": "/spnft/service-worker.js",
-    "static/css/main.5012621c.chunk.css.map": "/spnft/static/css/main.5012621c.chunk.css.map",
+    "static/css/main.11e0132a.chunk.css.map": "/spnft/static/css/main.11e0132a.chunk.css.map",
     "static/js/2.73a8a90c.chunk.js.LICENSE.txt": "/spnft/static/js/2.73a8a90c.chunk.js.LICENSE.txt",
     "static/media/logo.png": "/spnft/static/media/logo.61e754be.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8b1162b8.js",
     "static/js/2.73a8a90c.chunk.js",
-    "static/css/main.5012621c.chunk.css",
+    "static/css/main.11e0132a.chunk.css",
     "static/js/main.47fc2862.chunk.js"
   ]
 }
