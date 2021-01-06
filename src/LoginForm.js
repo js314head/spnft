@@ -13,6 +13,7 @@ const LoginForm = ({
   handleSignup,
   emailError,
   setHasAccount,
+  demoLogin,
 }) => {
   return (
     <div className="Login">
@@ -41,6 +42,9 @@ const LoginForm = ({
       <div className="Login-btn-container">
         {hasAccount ? (
           <>
+            <button className="Login-btn" onClick={demoLogin}>
+              Demo Login
+            </button>
             <button className="Login-btn" onClick={handleLogin}>
               Prijavi se
             </button>
@@ -53,6 +57,9 @@ const LoginForm = ({
           </>
         ) : (
           <>
+            <button className="Login-btn" onClick={demoLogin}>
+              Demo Login
+            </button>
             <button className="Login-btn" onClick={handleSignup}>
               Registriraj se
             </button>

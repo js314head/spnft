@@ -40,6 +40,11 @@ const Login = () => {
       });
   };
 
+  const demoLogin = () => {
+    clearErrors();
+    fire.auth().signInWithEmailAndPassword('test@gmail.com', '123456');
+  };
+
   const handleSignup = () => {
     clearErrors();
     fire
@@ -94,6 +99,7 @@ const Login = () => {
           setHasAccount={setHasAccount}
           hasAccount={hasAccount}
           handleSignup={handleSignup}
+          demoLogin={demoLogin}
         />
       )}
     </>
